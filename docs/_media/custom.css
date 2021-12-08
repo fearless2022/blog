@@ -1,9 +1,10 @@
 section.cover .cover-main {
     z-index: 100;
 }
+
 section.cover.has-mask .mask {
     background-color: #fff;
-    opacity: .1!important;
+    opacity: .1 !important;
     position: absolute;
     top: 0;
     height: 100%;
