@@ -20,9 +20,9 @@
 
 * ```tex
   创建文件夹保存配置文件
-  D:\Work\WorkProject\lilishop\configuration\logstash
-  D:\Work\WorkProject\lilishop\configuration\logstash\config
-  D:\Work\WorkProject\lilishop\configuration\logstash\pipeline
+  D:\Work\WorkProject\shop\configuration\logstash
+  D:\Work\WorkProject\shop\configuration\logstash\config
+  D:\Work\WorkProject\shop\configuration\logstash\pipeline
   在config文件夹下创建logstash.yml
   在pipeline文件夹下创建logstash.conf
   ```
@@ -69,7 +69,7 @@
 ## 启动logstash
 
 * ```bash
-  docker run -it -d --name logstash --link docker_elasticsearch_1 --net docker_default -v D:\Work\WorkProject\lilishop\configuration\logstash\pipeline:/usr/share/logstash/pipeline -v D:\Work\WorkProject\lilishop\configuration\logstash\config\logstash.yml:/usr/share/logstash/config/logstash.yml -v D:\Work\WorkProject\lilishop\lilishop\lili-logs:/usr/share/logstash/logs -p 4560:4560 logstash:6.8.11
+  docker run -it -d --name logstash --link docker_elasticsearch_1 --net docker_default -v D:\Work\WorkProject\shop\configuration\logstash\pipeline:/usr/share/logstash/pipeline -v D:\Work\WorkProject\shop\configuration\logstash\config\logstash.yml:/usr/share/logstash/config/logstash.yml -v D:\Work\WorkProject\shop\shop\lili-logs:/usr/share/logstash/logs -p 4560:4560 logstash:6.8.11
   
   # --link + es容器名
   # --net es网络

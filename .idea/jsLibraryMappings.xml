@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="PROJECT" libraries="{buble, countable, dark, disqus, docsify, docsify-copy-code, docsify-pagination, dolphin, emoji, external-script, gitalk, index, prism-bash, prism-java, prism-php, prism-sql, pure, search, zoom-image}" />
+  </component>
+</project>

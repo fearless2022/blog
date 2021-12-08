@@ -14,4 +14,3 @@
 * ```bash
   systemctl restart docker
   ```
-

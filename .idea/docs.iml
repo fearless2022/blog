@@ -8,5 +8,24 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="emoji" level="application" />
+    <orderEntry type="library" name="dark" level="application" />
+    <orderEntry type="library" name="dolphin" level="application" />
+    <orderEntry type="library" name="buble" level="application" />
+    <orderEntry type="library" name="pure" level="application" />
+    <orderEntry type="library" name="zoom-image" level="application" />
+    <orderEntry type="library" name="search" level="application" />
+    <orderEntry type="library" name="docsify" level="application" />
+    <orderEntry type="library" name="docsify-copy-code" level="application" />
+    <orderEntry type="library" name="disqus" level="application" />
+    <orderEntry type="library" name="gitalk" level="application" />
+    <orderEntry type="library" name="docsify-pagination" level="application" />
+    <orderEntry type="library" name="countable" level="application" />
+    <orderEntry type="library" name="prism-bash" level="application" />
+    <orderEntry type="library" name="prism-php" level="application" />
+    <orderEntry type="library" name="prism-java" level="application" />
+    <orderEntry type="library" name="prism-sql" level="application" />
+    <orderEntry type="library" name="external-script" level="application" />
+    <orderEntry type="library" name="index" level="application" />
   </component>
 </module>

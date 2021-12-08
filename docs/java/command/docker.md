@@ -19,13 +19,13 @@
 ## docker启动logstash
 
 * ```bash
-  docker run -it -d --name logstash --link docker_elasticsearch_1 --net docker_default -v D:\Work\WorkProject\lilishop\configuration\logstash\pipeline:/usr/share/logstash/pipeline -v D:\Work\WorkProject\lilishop\configuration\logstash\config\logstash.yml:/usr/share/logstash/config/logstash.yml -v D:\Work\WorkProject\lilishop\lilishop\lili-logs:/usr/share/logstash/logs -p 4560:4560 logstash:6.8.11
+  docker run -it -d --name logstash --link docker_elasticsearch_1 --net docker_default -v D:\Work\WorkProject\shop\configuration\logstash\pipeline:/usr/share/logstash/pipeline -v D:\Work\WorkProject\shop\configuration\logstash\config\logstash.yml:/usr/share/logstash/config/logstash.yml -v D:\Work\WorkProject\shop\shop\lili-logs:/usr/share/logstash/logs -p 4560:4560 logstash:6.8.11
   ```
 
 ## 复制docker容器文件
 
 * ```bash
-  docker cp logstash:/usr/share/logstash D:/Work/WorkProject/lilishop/configuration/logstash
+  docker cp logstash:/usr/share/logstash D:/Work/WorkProject/shop/configuration/logstash
   ```
 
 ## 删除docker容器

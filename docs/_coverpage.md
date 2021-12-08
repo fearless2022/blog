@@ -8,5 +8,5 @@
 
 - 学习笔记 | 技术分享 | 生活随笔
 
-[GitHub](http://blog.fearless233.fun/)
+[GitHub](https://github.com/fearless2022/blog/tree/master/docs/)
 [Get Started](README.md)
