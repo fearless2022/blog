@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="73beb579-f18d-46c0-bcaa-dc79017c4b65" name="Default Changelist" comment="更新文档">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="ProjectId" id="21wwuu5qKl77cKbQLHdnN2PNLEH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Work\WebstormWorkSpace\vue-learn\docs\docs\_media" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="73beb579-f18d-46c0-bcaa-dc79017c4b65" name="Default Changelist" comment="" />
+      <created>1638865683836</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1638865683836</updated>
+      <workItem from="1638865686302" duration="201000" />
+      <workItem from="1638865914600" duration="4270000" />
+      <workItem from="1638870345980" duration="927000" />
+      <workItem from="1638927942013" duration="1033000" />
+      <workItem from="1638929203702" duration="2401000" />
+    </task>
+    <task id="LOCAL-00001" summary="docs">
+      <created>1638865959021</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1638865959021</updated>
+    </task>
+    <task id="LOCAL-00002" summary="docs">
+      <created>1638866304939</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1638866304939</updated>
+    </task>
+    <task id="LOCAL-00003" summary="docs">
+      <created>1638870362954</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1638870362954</updated>
+    </task>
+    <task id="LOCAL-00004" summary="docs">
+      <created>1638870800163</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1638870800163</updated>
+    </task>
+    <task id="LOCAL-00005" summary="docs">
+      <created>1638931250572</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1638931250573</updated>
+    </task>
+    <task id="LOCAL-00006" summary="更新文档">
+      <created>1638931276808</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1638931276808</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+      <path value="$PROJECT_DIR$/docs" />
+    </ignored-roots>
+    <MESSAGE value="docs" />
+    <MESSAGE value="更新文档" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新文档" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="499" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1638869158335">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="499" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.816@0.0.1536.816" timestamp="1638869158335" />
+    <state x="549" y="149" key="FileChooserDialogImpl" timestamp="1638865929184">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="549" y="149" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1638865929184" />
+    <state x="270" y="53" key="SettingsEditor" timestamp="1638931613841">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="270" y="53" key="SettingsEditor/0.0.1536.816@0.0.1536.816" timestamp="1638931613841" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1638931278634">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.816@0.0.1536.816" timestamp="1638931278634" />
+    <state x="468" y="142" width="600" height="556" key="find.popup" timestamp="1638866531961">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="468" y="142" width="600" height="556" key="find.popup/0.0.1536.816@0.0.1536.816" timestamp="1638866531961" />
+    <state x="491" y="195" key="git4idea.merge.GitPullDialog" timestamp="1638931406031">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="491" y="195" key="git4idea.merge.GitPullDialog/0.0.1536.816@0.0.1536.816" timestamp="1638931406031" />
+    <state x="425" y="185" key="run.anything.popup" timestamp="1638930224814">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="425" y="185" key="run.anything.popup/0.0.1536.816@0.0.1536.816" timestamp="1638930224814" />
+  </component>
+</project>
