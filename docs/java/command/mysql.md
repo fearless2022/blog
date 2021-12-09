@@ -9,4 +9,3 @@
 * ```sql
   SET PASSWORD FOR root=PASSWORD('yourpassword');
   ```
-
