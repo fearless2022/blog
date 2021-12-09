@@ -11,10 +11,10 @@
     <!--字体-->
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <!--主题-->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/buble.css">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dark.css">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/pure.css">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dolphin.css">
+<!--    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/buble.css">-->
+<!--    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dark.css">-->
+<!--    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/pure.css">-->
+<!--    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dolphin.css">-->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
     <!--gitalk评论-->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
@@ -34,6 +34,10 @@
     </style>
 </head>
 <body>
+<nav>
+    <a href="#/">Home</a>
+    <a href="#/README.md">Guide</a>
+</nav>
 <div id="app">loading...</div>
 <a class='blog-corner' target='_blank' href='https://github.com/fearless2022/blog/tree/master/docs/'>
     <svg t="1537495824569" class="icon" style="" viewBox="0 0 1025 1024" version="1.1"
@@ -65,9 +69,14 @@
         // 展示首页
         coverpage: true,
         // 展示导航栏
-        loadNavbar: true,
+        loadNavbar: false,
         // 展示侧边栏
         loadSidebar: true,
+        // 避免不必要的回退过程
+        alias: {
+            '/.*/_sidebar.md': '/_sidebar.md',
+            '/.*/_navbar.md': '/_navbar.md'
+        },
         // 切换页面后是否自动跳转到页面顶部
         auto2top: true,
         // 值为true只展示封面

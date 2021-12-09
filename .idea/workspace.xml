@@ -10,15 +10,27 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73beb579-f18d-46c0-bcaa-dc79017c4b65" name="Default Changelist" comment="docs">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/docs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/docs.iml" afterDir="false" />
+    <list default="true" id="73beb579-f18d-46c0-bcaa-dc79017c4b65" name="Default Changelist" comment="添加插件">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_coverpage.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_coverpage.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/java/bug/docker.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/java/bug/docker.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/java/command/docker.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/java/command/docker.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/java/learn/docker-es安装logstash.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/java/learn/docker-es安装logstash.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/java/bug/_navbar.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/java/bug/_sidebar.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/java/command/_navbar.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/java/command/_sidebar.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/java/deploy/_navbar.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/java/deploy/_sidebar.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/java/learn/_navbar.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/java/learn/_sidebar.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/java/learn/springcloud/_navbar.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/java/learn/springcloud/_sidebar.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/java/project/_navbar.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/java/project/_sidebar.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/_navbar.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/_sidebar.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/python/_navbar.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/python/_sidebar.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/vue/_navbar.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/vue/_sidebar.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +68,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Work\Docs\docs" />
       <recent name="D:\Work\Docs\docs\java\bug" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -80,7 +93,7 @@
       <workItem from="1638865914600" duration="4270000" />
       <workItem from="1638870345980" duration="927000" />
       <workItem from="1638927942013" duration="1033000" />
-      <workItem from="1638929203702" duration="17835000" />
+      <workItem from="1638929203702" duration="21266000" />
     </task>
     <task id="LOCAL-00001" summary="docs">
       <created>1638865959021</created>
@@ -131,7 +144,21 @@
       <option name="project" value="LOCAL" />
       <updated>1638931670516</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="添加插件">
+      <created>1638954177249</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1638954177249</updated>
+    </task>
+    <task id="LOCAL-00009" summary="添加插件">
+      <created>1638954217176</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1638954217176</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,7 +183,8 @@
     </ignored-roots>
     <MESSAGE value="更新文档" />
     <MESSAGE value="docs" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs" />
+    <MESSAGE value="添加插件" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加插件" />
   </component>
   <component name="WindowStateProjectService">
     <state x="499" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1638932827078">
@@ -171,10 +199,10 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="270" y="53" key="SettingsEditor/0.0.1536.816@0.0.1536.816" timestamp="1638931613841" />
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1638931712439">
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1638954218943">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.816@0.0.1536.816" timestamp="1638931712439" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.816@0.0.1536.816" timestamp="1638954218943" />
     <state x="468" y="142" width="600" height="556" key="find.popup" timestamp="1638953911071">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
