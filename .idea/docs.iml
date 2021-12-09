@@ -27,5 +27,10 @@
     <orderEntry type="library" name="prism-sql" level="application" />
     <orderEntry type="library" name="external-script" level="application" />
     <orderEntry type="library" name="index" level="application" />
+    <orderEntry type="library" name="docsify-themeable" level="application" />
+    <orderEntry type="library" name="theme-simple" level="application" />
+    <orderEntry type="library" name="prism-json" level="application" />
+    <orderEntry type="library" name="prism-yaml" level="application" />
+    <orderEntry type="library" name="prism-xml-doc" level="application" />
   </component>
 </module>

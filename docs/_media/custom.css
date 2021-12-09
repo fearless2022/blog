@@ -29,3 +29,16 @@ section.cover .cover-main > p:last-child a .iconfont {
 .sidebar > h1 a {
     font-family: 'Lobster', cursive;
 }
+
+.blog-corner {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-top: 40px solid transparent;
+    border-left: 40px solid transparent;
+    border-right: 40px solid #606266;
+    border-bottom: 40px solid #606266;
+    z-index: 1;
+}

@@ -11,33 +11,16 @@
     <!-- 字体 -->
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <!--主题-->
-<!--    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/buble.css">-->
-<!--    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dark.css">-->
-<!--    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/pure.css">-->
-<!--    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dolphin.css">-->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/buble.css" title="buble"> -->
+    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dark.css" title="dark"> -->
+    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/pure.css" title="pure"> -->
+    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dolphin.css" title="dolphin"> -->
+    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css" title="theme-simple"> -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" title="vue">
     <!-- gitalk评论 -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
-    <style>
-        .blog-corner {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            width: 0;
-            height: 0;
-            border-top: 40px solid transparent;
-            border-left: 40px solid transparent;
-            border-right: 40px solid #606266;
-            border-bottom: 40px solid #606266;
-            z-index: 1;
-        }
-    </style>
 </head>
 <body>
-<nav>
-    <a href="#/">Home</a>
-    <a href="#/README.md">Guide</a>
-</nav>
 <div id="app">loading...</div>
 <a class='blog-corner' target='_blank' href='https://github.com/fearless2022/blog/tree/master/docs/'>
     <svg t="1537495824569" class="icon" style="" viewBox="0 0 1025 1024" version="1.1"
@@ -69,18 +52,20 @@
         // 展示首页
         coverpage: true,
         // 展示导航栏
-        loadNavbar: false,
+        loadNavbar: true,
         // 展示侧边栏
         loadSidebar: true,
+        // 执行文档里的 script 标签里的脚本
+        executeScript: true,
+        // 切换页面后是否自动跳转到页面顶部
+        auto2top: true,
+        // 值为true只展示封面
+        onlyCover: false,
         // 避免不必要的回退过程
         alias: {
             '/.*/_sidebar.md': '/_sidebar.md',
             '/.*/_navbar.md': '/_navbar.md'
         },
-        // 切换页面后是否自动跳转到页面顶部
-        auto2top: true,
-        // 值为true只展示封面
-        onlyCover: false,
         // 展示目录
         subMaxLevel: 2,
         // 字数统计
@@ -99,7 +84,7 @@
                 let footer = [
                     '<hr/>',
                     '<footer>',
-                    '<span><a href="https://github.com/fearless2022/blog/tree/master/docs/">fearless233</a> &copy;2017.</span>',
+                    '<span><a href="https://github.com/fearless2022/blog/tree/master/docs/">fearless233</a> &copy;2021.</span>',
                     '<span>Proudly published with <a href="https://docsify.js.org/#/zh-cn/quickstart" target="_blank">docsify</a>.</span>',
                     '</footer>'
                 ].join('');
@@ -112,7 +97,7 @@
                 hook.beforeEach(function (html) {
                     let url =
                         'https://github.com/fearless2022/blog/tree/master/docs/' + vm.route.file;
-                    let editHtml = '[📝 Edit on github](' + url + ')\n';
+                    let editHtml = '[:memo: Edit on github](' + url + ')\n';
                     return (
                         html +
                         '\n----\n' +
@@ -125,14 +110,14 @@
     }
 </script>
 <!-- Docsify v4 -->
-<script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
 <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
-<script src="//unpkg.com/docsify/lib/plugins/external-script.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
 <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
 <!-- 代码高亮 -->
@@ -140,6 +125,9 @@
 <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-java.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-sql.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-yaml.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-xml-doc.min.js"></script>
 <script>
     const gitalk = new Gitalk({
         clientID: 'f3216099136c8eaf4acd',
@@ -150,8 +138,20 @@
         // facebook-like distraction free mode
         distractionFreeMode: false
     })
+</script>
+<script>
     if (typeof navigator.serviceWorker !== 'undefined') {
-        navigator.serviceWorker.register('sw.js')
+        navigator.serviceWorker.register('_media/sw.js')
+    }
+</script>
+<script>
+    // 动态加载css文件
+    function loadStyles(url) {
+        let link = document.createElement("link");
+        link.type = "text/css";
+        link.rel = "stylesheet";
+        link.href = url;
+        document.getElementsByTagName("head")[0].appendChild(link);
     }
 </script>
 </body>

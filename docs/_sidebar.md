@@ -71,5 +71,3 @@
 
     * [element-ui](/vue/element-ui.md)
     * [vue](/vue/vue.md)
-
-  
