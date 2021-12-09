@@ -57,9 +57,9 @@
     * [iot-huanyu](/java/project/iot-huanyu.md)
     * [mes](/java/project/mes.md)
 
-* other
+* blog
 
-    * [ebook](/other/ebook.md)
+    * [ebook](/blog/ebook.md)
 
 * python
 
