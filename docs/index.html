@@ -128,6 +128,7 @@
 <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-yaml.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-xml-doc.min.js"></script>
+<script src="//cdn.bootcdn.net/ajax/libs/blueimp-md5/2.18.0/js/md5.min.js"></script>
 <script>
     const gitalk = new Gitalk({
         clientID: 'f3216099136c8eaf4acd',
@@ -135,6 +136,7 @@
         repo: 'blog',
         owner: 'fearless2022',
         admin: ['fearless2022'],
+        id: md5(title),
         // facebook-like distraction free mode
         distractionFreeMode: false
     })

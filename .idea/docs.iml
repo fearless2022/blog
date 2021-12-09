@@ -32,5 +32,6 @@
     <orderEntry type="library" name="prism-json" level="application" />
     <orderEntry type="library" name="prism-yaml" level="application" />
     <orderEntry type="library" name="prism-xml-doc" level="application" />
+    <orderEntry type="library" name="md5" level="application" />
   </component>
 </module>
