@@ -2,7 +2,7 @@
 
 ![logo](_media/汤姆猫-01.svg)
 
-# fearless233's <sup>blog</sup>
+# fearless<sup>233</sup>'s blog
 
 > The harder you work, the more luck you have.
 

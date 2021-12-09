@@ -1,3 +1,3 @@
-# Headline
+# fearless<sup>233</sup>'s blog
 
-> An awesome project.
+> The harder you work, the more luck you have.
