@@ -7,7 +7,7 @@
     <meta name="description" content="Description">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <!-- 自定义css -->
-    <link rel="stylesheet" href="./_media/custom.css">
+    <link rel="stylesheet" href="./resource/base/custom.css">
     <!-- 字体 -->
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <!-- 主题 -->
@@ -58,6 +58,8 @@
         executeScript: true,
         // 切换页面后是否自动跳转到页面顶部
         auto2top: true,
+        // 在找不到指定页面时加载_404.md
+        notFoundPage: true,
         // 值为true只展示封面
         onlyCover: false,
         // 搜索
@@ -170,7 +172,7 @@
 </script>
 <script>
     if (typeof navigator.serviceWorker !== 'undefined') {
-        navigator.serviceWorker.register('_media/sw.js')
+        navigator.serviceWorker.register('resource/base/sw.js')
     }
 </script>
 </body>

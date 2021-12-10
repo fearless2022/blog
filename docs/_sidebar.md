@@ -59,7 +59,8 @@
 
 * blog
 
-    * [ebook](/blog/ebook.md)
+    * [book](/blog/book.md)
+    * [个人博客搭建](/blog/个人博客搭建.md)
 
 * python
 

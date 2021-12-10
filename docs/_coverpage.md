@@ -1,6 +1,6 @@
 <!-- _coverpage.md -->
 
-![logo](_media/汤姆猫-01.svg)
+![logo](resource/base/logo.svg)
 
 # fearless<sup>233</sup>'s blog
 
@@ -10,3 +10,7 @@
 
 [GitHub](https://github.com/fearless2022/blog/tree/master/docs/)
 [Get Started](README.md)
+
+<!-- background image -->
+<!-- ![](https://www.sunniejs.cn/static/wx/bg.jpg) -->
+<!-- ![](resource/base/bg.jpg) -->

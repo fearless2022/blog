@@ -86,10 +86,9 @@
 
 ## 配置kibana
 
-* ![image-20210716151934190](../../image/docker-es%E5%AE%89%E8%A3%85logstash/image-20210716151934190.png)
-* ![image-20210716152025025](../../image/docker-es%E5%AE%89%E8%A3%85logstash/image-20210716152025025.png)
+* ![image-20210716151934190](../../resource/image/docker-es%E5%AE%89%E8%A3%85logstash/image-20210716151934190.png)
+* ![image-20210716152025025](../../resource/image/docker-es%E5%AE%89%E8%A3%85logstash/image-20210716152025025.png)
 
-* ![image-20210716152119351](../../image/docker-es%E5%AE%89%E8%A3%85logstash/image-20210716152119351.png)
+* ![image-20210716152119351](../../resource/image/docker-es%E5%AE%89%E8%A3%85logstash/image-20210716152119351.png)
 
-* ![image-20210716152323912](../../image/docker-es%E5%AE%89%E8%A3%85logstash/image-20210716152323912.png)
-
+* ![image-20210716152323912](../../resource/image/docker-es%E5%AE%89%E8%A3%85logstash/image-20210716152323912.png)
