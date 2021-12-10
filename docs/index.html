@@ -11,12 +11,14 @@
     <!-- 字体 -->
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <!-- 主题 -->
-    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/buble.css" title="buble"> -->
-    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dark.css" title="dark"> -->
-    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/pure.css" title="pure"> -->
-    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dolphin.css" title="dolphin"> -->
-    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css" title="theme-simple"> -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" title="vue">
+    <link name="theme" rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/buble.css" title="buble" disabled>
+    <link name="theme" rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dark.css" title="dark" disabled>
+    <link name="theme" rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/pure.css" title="pure" disabled>
+    <link name="theme" rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dolphin.css" title="dolphin"
+          disabled>
+    <link name="theme" rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"
+          title="simple" disabled>
+    <link name="theme" rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" title="vue">
     <!-- gitalk评论 -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
 </head>
@@ -40,16 +42,12 @@
 <script>
     window.$docsify = {
         name: 'fearless<sup>233</sup>’s blog',
+        // 页面右上角渲染一个 GitHub Corner 挂件
         repo: 'https://blog.fearless233.fun/',
         // 通过 {docsify-updated} 变量显示文档更新日期
         formatUpdated: '{YYYY}/{MM}/{DD} {HH}:{mm}:{ss}',
-        // 搜索
-        search: {
-            paths: 'auto',
-            placeholder: '🔍 Type to search ',
-            noData: '😞 No Results! ',
-            depth: 6
-        },
+        // 展示目录
+        subMaxLevel: 2,
         // 展示首页
         coverpage: true,
         // 展示导航栏
@@ -62,13 +60,23 @@
         auto2top: true,
         // 值为true只展示封面
         onlyCover: false,
+        // 搜索
+        search: {
+            paths: 'auto',
+            placeholder: '🔍 Type to search',
+            noData: '😞 No Results!',
+            depth: 6
+        },
+        // 在 Markdown 中显示选项卡插件
+        tabs: {
+            // Accepts: 'classic', 'material', false
+            theme: 'classic' // default
+        },
         // 避免不必要的回退过程
         alias: {
             '/.*/_sidebar.md': '/_sidebar.md',
             '/.*/_navbar.md': '/_navbar.md'
         },
-        // 展示目录
-        subMaxLevel: 2,
         // 字数统计
         count: {
             countable: true,
@@ -118,6 +126,8 @@
 </script>
 <!-- Docsify v4 -->
 <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+<!-- docsify-tabs (latest v1.x.x) -->
+<script src="//cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
 <!-- 字数统计插件 -->
 <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
 <!-- gitalk评论插件 -->
@@ -127,6 +137,8 @@
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
 <!-- 全文搜索插件 -->
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+<!-- 该插件会忽略双音符（例如，"cafe" 也会匹配 "café"） -->
+<script src="//polyfill.io/v3/polyfill.min.js?features=String.prototype.normalize"></script>
 <!-- 图片缩放插件 -->
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
 <!-- 支持外联脚本插件 -->
@@ -159,16 +171,6 @@
 <script>
     if (typeof navigator.serviceWorker !== 'undefined') {
         navigator.serviceWorker.register('_media/sw.js')
-    }
-</script>
-<script>
-    // 动态加载css文件
-    function loadStyles(url) {
-        let link = document.createElement("link");
-        link.type = "text/css";
-        link.rel = "stylesheet";
-        link.href = url;
-        document.getElementsByTagName("head")[0].appendChild(link);
     }
 </script>
 </body>
