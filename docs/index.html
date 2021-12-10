@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="./resource/base/custom.css">
     <!-- 字体 -->
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <!-- 侧边栏折叠 -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css" />
+    <!-- gitalk评论 -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
     <!-- 主题 -->
     <link name="theme" rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/buble.css" title="buble" disabled>
     <link name="theme" rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dark.css" title="dark" disabled>
@@ -19,8 +23,6 @@
     <link name="theme" rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"
           title="simple" disabled>
     <link name="theme" rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" title="vue">
-    <!-- gitalk评论 -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
 </head>
 <body>
 <div id="app">loading...</div>
@@ -48,6 +50,8 @@
         formatUpdated: '{YYYY}/{MM}/{DD} {HH}:{mm}:{ss}',
         // 展示目录
         subMaxLevel: 2,
+        // 设置默认折叠的层级
+        sidebarDisplayLevel: 6,
         // 展示首页
         coverpage: true,
         // 展示导航栏
@@ -128,6 +132,8 @@
 </script>
 <!-- Docsify v4 -->
 <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+<!-- 侧边栏折叠 -->
+<script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 <!-- docsify-tabs (latest v1.x.x) -->
 <script src="//cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
 <!-- 字数统计插件 -->
@@ -149,6 +155,8 @@
 <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
 <!-- 分页导航插件 -->
 <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+<!-- md5加密 -->
+<script src="//cdn.bootcdn.net/ajax/libs/blueimp-md5/2.18.0/js/md5.min.js"></script>
 <!-- 代码高亮 -->
 <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
@@ -157,7 +165,6 @@
 <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-yaml.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-xml-doc.min.js"></script>
-<script src="//cdn.bootcdn.net/ajax/libs/blueimp-md5/2.18.0/js/md5.min.js"></script>
 <script>
     const gitalk = new Gitalk({
         clientID: 'f3216099136c8eaf4acd',
