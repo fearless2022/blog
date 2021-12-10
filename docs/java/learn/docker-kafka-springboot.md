@@ -159,7 +159,7 @@
   }
   ```
 
-* 此时已经可以启动项目，访问：localhost:8080/sendMessage?message=abc 进行测试
+* 此时已经可以启动项目，访问：[http://localhost:8080/sendMessage?message=abc](http://localhost:8080/sendMessage?message=abc) 进行测试
 
 ### 整合swagger-ui
 
@@ -217,8 +217,8 @@
 
 #### 测试地址
 
-* 原生swagger-ui：localhost:8080/swagger-ui.html
+* 原生swagger-ui：[http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
 
-* 增强swagger-ui：localhost:8080/doc.html
+* 增强swagger-ui：[http://localhost:8080/doc.html](http://localhost:8080/doc.html)
 
 * 增强swagger-ui界面比原生好看一些（还有一些新增功能，可以百度了解），使用也比较简单，只需引入`knife4j-spring-boot-starter`依赖，在swagger配置类上加`@EnableKnife4j`注解就可以了

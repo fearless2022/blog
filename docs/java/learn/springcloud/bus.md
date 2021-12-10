@@ -4,7 +4,7 @@
 
 * 消息总线，实现不重启服务更新配置
 * 需整合rabbitmq
-* **POST请求：**localhost:9090/actuator/bus-refresh
+* **POST请求：**[http://localhost:9090/actuator/bus-refresh](http://localhost:9090/actuator/bus-refresh)
 
 ### config-client
 #### pom.xml

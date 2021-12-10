@@ -6,7 +6,7 @@
 
 * server服务端
 
-* 访问地址 http://localhost:8761
+* 访问地址 [http://localhost:8761](http://localhost:8761)
 
 ### eureka-server
 

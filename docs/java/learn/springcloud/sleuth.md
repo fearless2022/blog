@@ -13,7 +13,7 @@
   java -jar zipkin-server-2.12.9-exec.jar
   ```
 
-* 访问地址：http://localhost:9411
+* 访问地址：[http://localhost:9411](http://localhost:9411)
 
 ### zipkin-client
 
