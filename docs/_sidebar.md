@@ -56,18 +56,18 @@
     * [iot](/java/project/iot.md)
     * [iot-huanyu](/java/project/iot-huanyu.md)
     * [mes](/java/project/mes.md)
-
+    
 * blog
 
     * [book](/blog/book.md)
     * [个人博客搭建](/blog/个人博客搭建.md)
-
+    
 * python
 
     * [alive-progress](/python/alive-progress.md)
     * [naming-conventions](/python/naming-conventions.md)
     * [tqdm](/python/tqdm.md)
-
+    
 * vue
 
     * [element-ui](/vue/element-ui.md)
