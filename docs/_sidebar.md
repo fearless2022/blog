@@ -38,7 +38,6 @@
         * [ribbon](/java/learn/springcloud/ribbon.md)
         * [sleuth](/java/learn/springcloud/sleuth.md)
         * [zuul](/java/learn/springcloud/zuul.md)
-        
     * [docker-es安装head插件](/java/learn/docker-es安装head插件.md)
     * [docker-es安装ik分词器](/java/learn/docker-es安装ik分词器.md)
     * [docker-es安装logstash](/java/learn/docker-es安装logstash.md)
@@ -48,6 +47,7 @@
     * [minio](/java/learn/minio.md)
     * [mybatis-plus](/java/learn/mybatis-plus.md)
     * [mysql](/java/learn/mysql.md)
+    * [annotation](/java/learn/annotation.md)
     
   * project
   
@@ -56,7 +56,7 @@
     * [iot](/java/project/iot.md)
     * [iot-huanyu](/java/project/iot-huanyu.md)
     * [mes](/java/project/mes.md)
-    
+  
 * blog
 
     * [book](/blog/book.md)
