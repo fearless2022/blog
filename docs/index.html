@@ -81,7 +81,9 @@
             paths: 'auto',
             placeholder: '🔍 Type to search',
             noData: '😞 No Results!',
-            depth: 6
+            depth: 6,
+            // 过期时间，单位毫秒，默认一天
+            maxAge: 86400000
         },
         // 在 Markdown 中显示选项卡插件
         tabs: {
@@ -141,7 +143,7 @@
     }
 </script>
 <!-- Docsify v4 -->
-<script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
 <!-- 侧边栏折叠 -->
 <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 <!-- docsify-tabs (latest v1.x.x) -->
