@@ -221,7 +221,7 @@
 * 增强swagger-ui：[http://localhost:8080/doc.html](http://localhost:8080/doc.html)
 * 增强swagger-ui界面比原生好看一些（还有一些新增功能，可以百度了解），使用也比较简单，只需引入`knife4j-spring-boot-starter`依赖，在swagger配置类上加`@EnableKnife4j`注解就可以了
 
-## kafka相关概念学习
+## [kafka相关概念学习](https://blog.csdn.net/lzb348110175/category_9309572.html)
 
 ### topic-partition
 
@@ -317,3 +317,5 @@
   // 直接使用了transferTo()进行通道间的数据传输
   fileChannel.transferTo(0, fileChannel.size(), socketChannel);
   ```
+
+## [学习链接](https://blog.csdn.net/lzb348110175/category_9309572.html)
