@@ -35,6 +35,7 @@
         * [ribbon](/java/learn/springcloud/ribbon.md)
         * [sleuth](/java/learn/springcloud/sleuth.md)
         * [zuul](/java/learn/springcloud/zuul.md)
+        * [springcloud底层服务之间调用](/java/learn/springcloud/springcloud底层服务之间调用.md)
     * [annotation](/java/learn/annotation.md)
     * [docker-es安装head插件](/java/learn/docker-es安装head插件.md)
     * [docker-es安装ik分词器](/java/learn/docker-es安装ik分词器.md)
@@ -45,6 +46,9 @@
     * [minio](/java/learn/minio.md)
     * [mybatis-plus](/java/learn/mybatis-plus.md)
     * [mysql](/java/learn/mysql.md)
+    * [redis](/java/learn/redis.md)
+    * [typora](/java/learn/typora.md)
+    * [zookeeper](/java/learn/zookeeper.md)
   * project
   
     * [alarm](/java/project/alarm.md)

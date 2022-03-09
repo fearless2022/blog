@@ -98,3 +98,15 @@
   }
   ```
 
+### **Feign 如何结合 Ribbon 切换均衡算法**
+
+* 默认轮询负载均衡算法
+
+* 在 application.yml 配置文件中指定
+
+* ```yaml
+  # feign和ribbon结合，指定策略。feign默认的是轮询的策略，这里的配置可以自定义
+  MICROSERVICE-ORDER:
+   ribbon:
+     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+  ```
