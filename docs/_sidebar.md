@@ -1,17 +1,22 @@
 <!-- docs/_sidebar.md --> 
 
-* java
+* bug
 
-  * bug
-  
-    * [docker](/java/bug/docker.md)
-    * [elasticsearch](/java/bug/elasticsearch.md)
-    * [git](/java/bug/git.md)
-    * [mongodb](/java/bug/mongodb.md)
-    * [mysql](/java/bug/mysql.md)
-    * [other](/java/bug/other.md)
+  * [docker](/bug/docker.md)
+
+  * [elasticsearch](/bug/elasticsearch.md)
+
+  * [git](/bug/git.md)
+
+  * [mongodb](/bug/mongodb.md)
+
+  * [mysql](/bug/mysql.md)
+
+  * [other](/bug/other.md)
+
+* java
   * command
-  
+
     * [docker](/java/command/docker.md)
     * [elasticsearch](/java/command/elasticsearch.md)
     * [gateway](/java/command/gateway.md)
@@ -20,13 +25,13 @@
     * [mongodb](/java/command/mongodb.md)
     * [mysql](/java/command/mysql.md)
   * deploy
-  
+
     * [eem](/java/deploy/eem.md)
     * [iot](/java/deploy/iot.md)
   * learn
-  
+
     * springcloud
-    
+
         * [bus](/java/learn/springcloud/bus.md)
         * [config](/java/learn/springcloud/config.md)
         * [eureka](/java/learn/springcloud/eureka.md)
@@ -50,7 +55,7 @@
     * [typora](/java/learn/typora.md)
     * [zookeeper](/java/learn/zookeeper.md)
   * project
-  
+
     * [alarm](/java/project/alarm.md)
     * [eem](/java/project/eem.md)
     * [iot](/java/project/iot.md)

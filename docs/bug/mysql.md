@@ -48,3 +48,10 @@
   mysql> alter user 'root'@'%' identified with mysql_native_password by '123456';
   mysql> flush privileges;
   ```
+
+## [解决java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed](https://www.cnblogs.com/xing-29391/p/13322843.html)
+
+* ```yaml
+  # mysql8.0在连接数据库的url中，加上allowPublicKeyRetrieval=true
+  jdbc:mysql://localhost:3306/user?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+  ```
