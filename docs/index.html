@@ -7,13 +7,15 @@
     <meta name="description" content="Description">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <!-- 自定义css -->
-    <link rel="stylesheet" href="./resource/base/custom.css">
+    <link rel="stylesheet" href="resource/base/css/custom.css">
     <!-- 字体 -->
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <!-- 侧边栏折叠 -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css"/>
     <!-- gitalk评论 -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+    <!-- 黑白主题切换 -->
+    <link rel="stylesheet" href="resource/base/css/docsify-darklight-theme.min.css"/>
     <!-- 主题 -->
     <link name="theme" rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/buble.css" title="buble" disabled>
     <link name="theme" rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dark.css" title="dark" disabled>
@@ -37,7 +39,7 @@
 <body>
 <div id="app">loading...</div>
 <!-- 页脚blog图标 -->
-<a class='blog-corner' target='_blank' href='https://github.com/fearless2022/blog/tree/master/docs/'>
+<!--<a class='blog-corner' target='_blank' href='https://github.com/fearless2022/blog/tree/master/docs/'>
     <svg t="1537495824569" class="icon" style="" viewBox="0 0 1025 1024" version="1.1"
          xmlns="http://www.w3.org/2000/svg" p-id="4360" width="30"
          height="30">
@@ -49,7 +51,7 @@
         <path d="M1025.512727 618.728727V359.191273h-45.172363v39.121454h-1.093819c-18.385455-30.487273-46.568727-45.730909-84.596363-45.730909-40.052364 0-71.586909 14.149818-94.626909 42.426182-23.063273 28.276364-34.583273 66.397091-34.583273 114.338909 0 42.24 10.705455 75.915636 32.093091 100.980364 21.410909 25.088 49.664 37.608727 84.736 37.608727 43.170909 0 75.496727-17.989818 97.000727-53.992727h1.093818v30.859636c0 28.928-5.329455 52.177455-16.011636 69.771636l-22.830545 24.157091-0.977455 0.674909c-7.144727 4.398545-57.716364 32.721455-130.117818-0.558545-78.219636-36.002909-189.533091-38.958545-216.948364 55.296l32.279273 24.855273s0-44.357818 49.989818-62.114909c37.143273-13.172364 77.568 3.467636 109.568 17.198545v0.186182c9.192727 4.654545 18.920727 8.494545 29.207273 11.496727l0.488727 0.162909a225.047273 225.047273 0 0 0 61.765818 8.215273c99.141818 0 148.736-51.828364 148.736-155.415273z m-69.003636-35.816727c-15.918545 17.989818-36.514909 26.996364-61.858909 26.996364-24.971636 0-45.056-9.402182-60.206546-28.253091-15.150545-18.827636-22.737455-43.938909-22.737454-75.357091 0-36.538182 7.889455-64.954182 23.691636-85.248s37.655273-30.464 65.582546-30.464c22.597818 0 41.448727 7.982545 56.622545 23.970909 15.150545 15.988364 22.737455 35.165091 22.737455 57.576727v41.611637c0 28.090182-7.959273 51.153455-23.831273 69.166545z"
               fill="#fff" p-id="4362"></path>
     </svg>
-</a>
+</a>-->
 <script src="//unpkg.com/docsify-edit-on-github/index.js"></script>
 <script>
     window.$docsify = {
@@ -169,6 +171,10 @@
 <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
 <!-- md5加密 -->
 <script src="//cdn.bootcdn.net/ajax/libs/blueimp-md5/2.18.0/js/md5.min.js"></script>
+<!-- 黑白主题切换 -->
+<script src="resource/base/js/docsify-darklight-theme.js"></script>
+<!-- 回到顶部 -->
+<script src="resource/base/js/vanilla-back-to-top.min.js"></script>
 <!-- 代码高亮 -->
 <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
@@ -177,6 +183,7 @@
 <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-yaml.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-xml-doc.min.js"></script>
+<!-- gitalk评论 -->
 <script>
     const gitalk = new Gitalk({
         clientID: 'f3216099136c8eaf4acd',
@@ -189,9 +196,18 @@
         distractionFreeMode: false
     })
 </script>
+<!-- 回到顶部功能 -->
+<script>
+    addBackToTop({
+        diameter: 56,
+        backgroundColor: 'rgb(66, 185, 131)',
+        textColor: '#fff',
+    });
+</script>
+<!-- 支持离线化 -->
 <script>
     if (typeof navigator.serviceWorker !== 'undefined') {
-        navigator.serviceWorker.register('resource/base/sw.js')
+        navigator.serviceWorker.register('resource/base/js/sw.js')
     }
 </script>
 </body>

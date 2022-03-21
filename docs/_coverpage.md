@@ -1,6 +1,6 @@
 <!-- _coverpage.md -->
 
-![logo](resource/base/logo.svg)
+![logo](resource/base/pic/logo.svg)
 
 # fearless<sup>233</sup>'s blog
 
@@ -13,4 +13,4 @@
 
 <!-- background image -->
 <!-- ![](https://www.sunniejs.cn/static/wx/bg.jpg) -->
-<!-- ![](resource/base/bg.jpg) -->
+<!-- ![](resource/base/pic/bg.jpg) -->

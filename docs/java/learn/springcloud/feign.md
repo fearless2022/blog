@@ -77,7 +77,7 @@
    
   	// 定义代码调用对方服务的"/hi"接口
   	// 请求url必须与被调用服务请求url一致，否则不能跳转
-      //必须添加@RequestParam注解，否则不能取到参数值
+      // 必须添加@RequestParam注解，否则不能取到参数值
       @GetMapping("/hi")
   	String hi(@RequestParam(value = "name") String name);
    
