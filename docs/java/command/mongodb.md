@@ -11,3 +11,11 @@
 * ```bash
   db.auth('admin', '123456')
   ```
+
+## 查询
+
+* ```bash
+  db.getCollection('essays').find({"essayId":"623ada6f5769a77e47727804"})
+  
+  db.essays.find({"essayId":"623adb5e5769a77e4772c3c9"})
+  ```

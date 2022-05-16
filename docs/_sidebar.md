@@ -1,20 +1,19 @@
 <!-- docs/_sidebar.md --> 
+* blog
 
+    * [book](/blog/book.md)
+    * [个人博客搭建](/blog/个人博客搭建.md)
+    * [gwy]()
 * bug
 
   * [docker](/bug/docker.md)
-
   * [elasticsearch](/bug/elasticsearch.md)
-
   * [git](/bug/git.md)
-
   * [mongodb](/bug/mongodb.md)
-
   * [mysql](/bug/mysql.md)
-
   * [other](/bug/other.md)
-
 * java
+
   * command
 
     * [docker](/java/command/docker.md)
@@ -39,8 +38,8 @@
         * [hystrix](/java/learn/springcloud/hystrix.md)
         * [ribbon](/java/learn/springcloud/ribbon.md)
         * [sleuth](/java/learn/springcloud/sleuth.md)
-        * [zuul](/java/learn/springcloud/zuul.md)
         * [springcloud底层服务之间调用](/java/learn/springcloud/springcloud底层服务之间调用.md)
+        * [zuul](/java/learn/springcloud/zuul.md)
     * [annotation](/java/learn/annotation.md)
     * [docker-es安装head插件](/java/learn/docker-es安装head插件.md)
     * [docker-es安装ik分词器](/java/learn/docker-es安装ik分词器.md)
@@ -61,10 +60,6 @@
     * [iot](/java/project/iot.md)
     * [iot-huanyu](/java/project/iot-huanyu.md)
     * [mes](/java/project/mes.md)
-* blog
-
-    * [book](/blog/book.md)
-    * [个人博客搭建](/blog/个人博客搭建.md)
 * python
 
     * [alive-progress](/python/alive-progress.md)
@@ -74,3 +69,5 @@
 
     * [element-ui](/vue/element-ui.md)
     * [vue](/vue/vue.md)
+
+* work
