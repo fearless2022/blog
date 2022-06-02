@@ -3,7 +3,6 @@
 
     * [book](/blog/book.md)
     * [个人博客搭建](/blog/个人博客搭建.md)
-    * [gwy](/)
 * bug
 
   * [docker](/bug/docker.md)
