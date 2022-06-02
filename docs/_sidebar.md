@@ -37,6 +37,7 @@
         * [feign](/java/learn/springcloud/feign.md)
         * [hystrix](/java/learn/springcloud/hystrix.md)
         * [ribbon](/java/learn/springcloud/ribbon.md)
+        * [sentinel](/java/learn/springcloud/sentinel.md)
         * [sleuth](/java/learn/springcloud/sleuth.md)
         * [springcloud底层服务之间调用](/java/learn/springcloud/springcloud底层服务之间调用.md)
         * [zuul](/java/learn/springcloud/zuul.md)
@@ -47,6 +48,7 @@
     * [docker-kafka-springboot](/java/learn/docker-kafka-springboot.md)
     * [java](/java/learn/java.md)
     * [jpa](/java/learn/jpa.md)
+    * [maven](/java/learn/maven.md)
     * [minio](/java/learn/minio.md)
     * [mybatis-plus](/java/learn/mybatis-plus.md)
     * [mysql](/java/learn/mysql.md)
@@ -54,7 +56,7 @@
     * [typora](/java/learn/typora.md)
     * [zookeeper](/java/learn/zookeeper.md)
   * project
-
+  
     * [alarm](/java/project/alarm.md)
     * [eem](/java/project/eem.md)
     * [iot](/java/project/iot.md)
@@ -69,5 +71,6 @@
 
     * [element-ui](/vue/element-ui.md)
     * [vue](/vue/vue.md)
-
 * work
+    * [天翼云图](/work/天翼云图.md)
+    * [工作记录](/work/工作记录.md)
