@@ -72,5 +72,4 @@
     * [element-ui](/vue/element-ui.md)
     * [vue](/vue/vue.md)
 * work
-    * [天翼云图](/work/天翼云图.md)
     * [工作记录](/work/工作记录.md)
