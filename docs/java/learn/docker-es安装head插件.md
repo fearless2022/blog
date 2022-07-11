@@ -7,7 +7,7 @@
 ## 运行
 
 * ```bash
-  docker run -d --name elasticsearch-head -p 9100:9100 docker.io/mobz/elasticsearch-head:5
+  docker run -d --name elasticsearch_head -p 9100:9100 docker.io/mobz/elasticsearch-head:5
   ```
 
 ## 修改es配置文件

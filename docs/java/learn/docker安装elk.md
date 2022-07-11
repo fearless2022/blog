@@ -13,8 +13,8 @@
 ## 拉取logstash
 
 * ```bash
-  docker pull logstash:6.8.11
   # 版本与elasticsearch、kibana保持一致
+  docker pull logstash:6.8.11
 
 ## 创建配置文件
 
@@ -69,11 +69,45 @@
 ## 启动logstash
 
 * ```bash
-  docker run -it -d --name logstash --link docker_elasticsearch_1 --net docker_default -v D:\Work\WorkProject\shop\configuration\logstash\pipeline:/usr/share/logstash/pipeline -v D:\Work\WorkProject\shop\configuration\logstash\config\logstash.yml:/usr/share/logstash/config/logstash.yml -v D:\Work\WorkProject\shop\shop\lili-logs:/usr/share/logstash/logs -p 4560:4560 logstash:6.8.11
+  docker run -it -d --name logstash --link docker_elasticsearch_1 --net docker_default -v D:\File\ProjectFile\Resource\elk\config\logstash\pipeline:/usr/share/logstash/pipeline -v D:\File\ProjectFile\Resource\elk\config\logstash\config\logstash.yml:/usr/share/logstash/config/logstash.yml -v D:\Work\IdeaWorkSpace\learn\fearless-admin\log:/usr/share/logstash/logs -p 4560:4560 logstash:6.8.11
   
   # --link + es容器名
   # --net es网络
   # -v 将docker容器目录挂载到宿主机目录（用宿主机目录替代docker容器的相应目录）
+  ```
+
+## springboot配置
+
+### 引入依赖
+
+* ```xml
+  <dependency>
+      <groupId>net.logstash.logback</groupId>
+      <artifactId>logstash-logback-encoder</artifactId>
+      <version>5.3</version>
+  </dependency>
+  ```
+
+### logback-spring.xml配置appender
+
+* ```xml
+  <!--输出到elk的LOGSTASH-->
+  <appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+      <!--LOGSTASH：ip:port-->
+      <destination>172.16.121.132:4560</destination>
+      <encoder charset="UTF-8" class="net.logstash.logback.encoder.LogstashEncoder">
+          <providers>
+              <timestamp>
+                  <timeZone>UTC</timeZone>
+              </timestamp>
+          </providers>
+      </encoder>
+  </appender>
+  
+  <!--默认所有的包以info-->
+  <root level="info">
+      <appender-ref ref="LOGSTASH"/>
+  </root>
   ```
 
 ## 查看索引
