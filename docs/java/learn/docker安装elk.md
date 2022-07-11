@@ -94,7 +94,7 @@
   <!--输出到elk的LOGSTASH-->
   <appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
       <!--LOGSTASH：ip:port-->
-      <destination>172.16.121.132:4560</destination>
+      <destination>192.168.3.135:4560</destination>
       <encoder charset="UTF-8" class="net.logstash.logback.encoder.LogstashEncoder">
           <providers>
               <timestamp>
