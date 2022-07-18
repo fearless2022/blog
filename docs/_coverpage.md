@@ -1,6 +1,6 @@
 <!-- _coverpage.md -->
 
-![logo](resource/base/pic/logo.svg)
+![logo](file/base/pic/logo.svg)
 
 # fearless<sup>233</sup>'s blog
 
