@@ -1,8 +1,9 @@
 <!-- docs/_sidebar.md --> 
+
 * blog
-    * [book](/blog/book.md)
-    * [个人博客搭建](/blog/个人博客搭建.md)
-    
+  * [book](/blog/book.md)
+  * [个人博客搭建](/blog/个人博客搭建.md)
+  
 * bug
   * [docker](/bug/docker.md)
   * [elasticsearch](/bug/elasticsearch.md)
