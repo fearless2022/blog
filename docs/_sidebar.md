@@ -12,7 +12,6 @@
   * [other](/bug/other.md)
 
 * command
-  * [docker](/command/docker.md)
   * [elasticsearch](/command/elasticsearch.md)
   * [gateway](/command/gateway.md)
   * [javascript](/command/javascript.md)
@@ -34,24 +33,29 @@
     * [ribbon](/learn/springcloud/ribbon.md)
     * [sentinel](/learn/springcloud/sentinel.md)
     * [sleuth](/learn/springcloud/sleuth.md)
-    * [springcloud底层服务之间调用](/learn/springcloud/springcloud底层服务之间调用.md)
+    * [服务调用](/learn/springcloud/服务调用.md)
     * [zuul](/learn/springcloud/zuul.md)
+  
+  * docker
+    * [docker](/learn/docker/docker.md)
+    * [docker-es-head](/learn/docker/docker-es-head.md)
+    * [docker-es-ik](/learn/docker/docker-es-ik.md)
+    * [docker-kafka](/learn/docker/docker-kafka.md)
+    * [docker-elk](/learn/docker/docker-elk.md)
+    * [docker-elk-filebeat](/learn/docker/docker-elk-filebeat.md)
+    * [docker-minio](/learn/docker-minio.md)
+    * [docker-nginx](/learn/docker-nginx.md)
+    
   * [annotation](/learn/annotation.md)
-  * [docker-es安装head插件](/learn/docker-es安装head插件.md)
-  * [docker-es安装ik分词器](/learn/docker-es安装ik分词器.md)
-  * [docker-kafka-springboot](/learn/docker-kafka-springboot.md)
-  * [docker安装elk](/learn/docker安装elk.md)
-  * [docker安装elk+filebeat](/learn/docker安装elk+filebeat.md)
   * [java](/learn/java.md)
   * [jpa](/learn/jpa.md)
   * [maven](/learn/maven.md)
-  * [minio](/learn/minio.md)
   * [mybatis-plus](/learn/mybatis-plus.md)
   * [mysql](/learn/mysql.md)
   * [redis](/learn/redis.md)
   * [typora](/learn/typora.md)
   * [zookeeper](/zookeeper.md)
-
+  
 * project
   * [alarm](/project/alarm.md)
   * [eem](/project/eem.md)
@@ -61,7 +65,7 @@
   
 * python
   * [alive-progress](/python/alive-progress.md)
-  * [naming-conventions](/python/naming-conventions.md)
+  * [naming](/python/naming.md)
   * [tqdm](/python/tqdm.md)
   
 * vue

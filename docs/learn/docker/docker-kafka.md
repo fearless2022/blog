@@ -97,7 +97,7 @@
 * 问题原因：springboot版本与spring-kafka版本不对应，项目中使用的springboot版本是：`2.4.1`，经过测试，spring-kafka的版本需要在`2.4.4.RELEASE`以上，否则会报上面的异常
 * springboot版本与spring-kafka版本的对应关系,可以查看[官网](https://spring.io/projects/spring-kafka#overview)
 * 下面是官网截图：
-* ![官网截图](../../resource/image/docker-kafka-springboot/image-20201221173020696.png)
+* ![官网截图](../../file/image/docker-kafka/image-20201221173020696.png)
 
 ### application.yml
 

@@ -69,7 +69,7 @@
 ## 启动logstash
 
 * ```bash
-  docker run -it -d --name logstash --link docker_elasticsearch_1 --net docker_default -v D:\File\ProjectFile\Resource\elk\config\logstash\pipeline:/usr/share/logstash/pipeline -v D:\File\ProjectFile\Resource\elk\config\logstash\config\logstash.yml:/usr/share/logstash/config/logstash.yml -v D:\Work\IdeaWorkSpace\learn\fearless-admin\log:/usr/share/logstash/logs -p 4560:4560 logstash:6.8.11
+  docker run -it -d --name logstash --link docker_elasticsearch_1 --net docker_default -v D:\File\ProjectFile\Resource\elk\logstash\pipeline:/usr/share/logstash/pipeline -v D:\File\ProjectFile\Resource\elk\logstash\config\logstash.yml:/usr/share/logstash/config/logstash.yml -v D:\Work\IdeaWorkSpace\learn\fearless-admin\log:/usr/share/logstash/logs -p 4560:4560 logstash:6.8.11
   
   # --link + es容器名
   # --net es网络
@@ -120,9 +120,9 @@
 
 ## 配置kibana
 
-* ![image-20210716151934190](../../resource/image/docker-es%E5%AE%89%E8%A3%85logstash/image-20210716151934190.png)
-* ![image-20210716152025025](../../resource/image/docker-es%E5%AE%89%E8%A3%85logstash/image-20210716152025025.png)
+* ![image-20210716151934190](../../file/image/docker-es-logstash/image-20210716151934190.png)
+* ![image-20210716152025025](../../file/image/docker-es-logstash/image-20210716152025025.png)
 
-* ![image-20210716152119351](../../resource/image/docker-es%E5%AE%89%E8%A3%85logstash/image-20210716152119351.png)
+* ![image-20210716152119351](../../file/image/docker-es-logstash/image-20210716152119351.png)
 
-* ![image-20210716152323912](../../resource/image/docker-es%E5%AE%89%E8%A3%85logstash/image-20210716152323912.png)
+* ![image-20210716152323912](../../file/image/docker-es-logstash/image-20210716152323912.png)

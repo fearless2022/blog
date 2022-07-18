@@ -63,4 +63,4 @@
 
 * **explain**
 
-* ![explain](../../resource/image/mysql/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5ZCR5aSp5YaN5YCfNTAw5bm0,size_20,color_FFFFFF,t_70,g_se,x_16.png)
+* ![explain](../file/image/mysql/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5ZCR5aSp5YaN5YCfNTAw5bm0,size_20,color_FFFFFF,t_70,g_se,x_16.png)

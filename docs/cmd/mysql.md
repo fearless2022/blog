@@ -29,5 +29,3 @@
   # 重启数据库
   service mysqld restart;
   ```
-
-* 
