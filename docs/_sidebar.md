@@ -3,7 +3,6 @@
 * blog
   * [book](/blog/book.md)
   * [个人博客搭建](/blog/个人博客搭建.md)
-  
 * bug
   * [docker](/bug/docker.md)
   * [elasticsearch](/bug/elasticsearch.md)
@@ -11,7 +10,6 @@
   * [mongodb](/bug/mongodb.md)
   * [mysql](/bug/mysql.md)
   * [other](/bug/other.md)
-
 * command
   * [elasticsearch](/command/elasticsearch.md)
   * [gateway](/command/gateway.md)
@@ -19,11 +17,9 @@
   * [linux](/command/linux.md)
   * [mongodb](/command/mongodb.md)
   * [mysql](/command/mysql.md)
-  
 * deploy
   * [eem](/deploy/eem.md)
   * [iot](/deploy/iot.md)
-
 * learn
   * springcloud
     * [bus](/learn/springcloud/bus.md)
@@ -36,7 +32,6 @@
     * [sleuth](/learn/springcloud/sleuth.md)
     * [服务调用](/learn/springcloud/服务调用.md)
     * [zuul](/learn/springcloud/zuul.md)
-  
   * docker
     * [docker](/learn/docker/docker.md)
     * [docker-es-head](/learn/docker/docker-es-head.md)
@@ -44,9 +39,9 @@
     * [docker-kafka](/learn/docker/docker-kafka.md)
     * [docker-elk](/learn/docker/docker-elk.md)
     * [docker-elk-filebeat](/learn/docker/docker-elk-filebeat.md)
-    * [docker-minio](/learn/docker-minio.md)
-    * [docker-nginx](/learn/docker-nginx.md)
-    
+    * [docker-minio](/learn/docker/docker-minio.md)
+    * [docker-nginx](/learn/docker/docker-nginx.md)
+    * [kubernetes](/learn/docker/kubernetes.md)
   * [annotation](/learn/annotation.md)
   * [java](/learn/java.md)
   * [jpa](/learn/jpa.md)
@@ -56,19 +51,16 @@
   * [redis](/learn/redis.md)
   * [typora](/learn/typora.md)
   * [zookeeper](/zookeeper.md)
-  
 * project
   * [alarm](/project/alarm.md)
   * [eem](/project/eem.md)
   * [iot](/project/iot.md)
   * [iot-huanyu](/project/iot-huanyu.md)
   * [mes](/project/mes.md)
-  
 * python
   * [alive-progress](/python/alive-progress.md)
   * [naming](/python/naming.md)
   * [tqdm](/python/tqdm.md)
-  
 * vue
   * [element-ui](/vue/element-ui.md)
   * [vue](/vue/vue.md)
