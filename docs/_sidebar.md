@@ -10,13 +10,13 @@
   * [mongodb](/bug/mongodb.md)
   * [mysql](/bug/mysql.md)
   * [other](/bug/other.md)
-* command
-  * [elasticsearch](/command/elasticsearch.md)
-  * [gateway](/command/gateway.md)
-  * [javascript](/command/javascript.md)
-  * [linux](/command/linux.md)
-  * [mongodb](/command/mongodb.md)
-  * [mysql](/command/mysql.md)
+* cmd
+  * [elasticsearch](/cmd/elasticsearch.md)
+  * [gateway](/cmd/gateway.md)
+  * [javascript](/cmd/javascript.md)
+  * [linux](/cmd/linux.md)
+  * [mongodb](/cmd/mongodb.md)
+  * [mysql](/cmd/mysql.md)
 * deploy
   * [eem](/deploy/eem.md)
   * [iot](/deploy/iot.md)
