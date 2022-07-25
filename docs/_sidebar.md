@@ -1,6 +1,7 @@
 <!-- docs/_sidebar.md --> 
 
 * blog
+  * [](/README.md)
   * [book](/blog/book.md)
   * [个人博客搭建](/blog/个人博客搭建.md)
 * bug
