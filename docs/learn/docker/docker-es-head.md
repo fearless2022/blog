@@ -32,10 +32,9 @@
 * ```bash
   # 原因
   elasticsearch 6增加了请求头严格校验的原因，并且返回结果是
-  
   {
-  "error" : "Content-Type header [application/x-www-form-urlencoded] is not supported",
-  "status" : 406
+    "error" : "Content-Type header [application/x-www-form-urlencoded] is not supported",
+    "status" : 406
   }
   # 解决
   # 进入容器
