@@ -1,6 +1,6 @@
 ## protocol脚本调试
 
-* ```javascript
+* ```html
   <!DOCTYPE html>
   <html>
   <body>
@@ -37,7 +37,7 @@
   ```
 
 ## cmd脚本调试
-* ```javascript
+* ```html
   <!DOCTYPE html>
   <html>
   <body>
