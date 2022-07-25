@@ -41,6 +41,7 @@
     * [docker-elk-filebeat](/learn/docker/docker-elk-filebeat.md)
     * [docker-minio](/learn/docker/docker-minio.md)
     * [docker-nginx](/learn/docker/docker-nginx.md)
+    * [docker-jenkins](/learn/docker/docker-jenkins.md)
     * [kubernetes](/learn/docker/kubernetes.md)
   * [annotation](/learn/annotation.md)
   * [java](/learn/java.md)

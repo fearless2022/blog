@@ -10,7 +10,7 @@
 
 * ```bash
   # 启动elasticsearch容器，进入plugins目录，创建ik文件夹
-  docker exec -it docker_elasticsearch_1 /bin/bash
+  docker exec -it elasticsearch /bin/bash
   cd plugins
   mkdir ik
   cd ik
@@ -21,5 +21,5 @@
   # 删除zip文件
   rm -f elasticsearch-analysis-ik-7.6.1.zip
   # 退出es容器，并重新启动即可
-  docker restart docker_elasticsearch_1
+  docker restart elasticsearch
   ```

@@ -14,7 +14,7 @@
 
 * ```bash
   # 进入es容器
-  docker exec -it docker_elasticsearch_1 /bin/bash
+  docker exec -it elasticsearch /bin/bash
   cd config
   vi elasticsearch.yml
   ```
@@ -28,3 +28,7 @@
   ```
 
 ## 重启容器
+
+* ```bash
+  docker restart elasticsearch
+  ```
