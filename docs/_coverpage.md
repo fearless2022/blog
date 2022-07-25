@@ -13,4 +13,7 @@
 
 <!-- background image -->
 <!-- ![](https://www.sunniejs.cn/static/wx/bg.jpg) -->
-<!-- ![](resource/base/pic/bg.jpg) -->
+<!-- ![](file/base/pic/bg.jpg) -->
+
+<!-- background color -->
+<!-- ![color](#f0f0f0) -->

@@ -42,3 +42,6 @@ secrets.yml
 .gradletasknamecache
 .sts4-cache
 /log
+node_modules/
+package.json
+package-lock.json
