@@ -5,7 +5,6 @@
   * [个人博客搭建](/blog/个人博客搭建.md)
 * bug
   * [docker](/bug/docker.md)
-  * [elasticsearch](/bug/elasticsearch.md)
   * [git](/bug/git.md)
   * [mongodb](/bug/mongodb.md)
   * [mysql](/bug/mysql.md)

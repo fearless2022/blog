@@ -63,16 +63,16 @@
 * ```json
   input {
     beats {
-      host => "0.0.0.0" #任意主机
-      port => "4560" #日志收集端口
+      host => "0.0.0.0" # 任意主机
+      port => "4560" # 日志收集端口
     }
   }
   
   output {
-    stdout { codec => rubydebug } #输出到控制台
+    stdout { codec => rubydebug } # 输出到控制台
     elasticsearch {
-      hosts => ["172.16.121.132:9200"] #es局域网地址，ip不能写成localhost或127.0.0.1
-      index => "logstash-%{+YYYY.MM.dd}" #es索引
+      hosts => ["172.16.121.132:9200"] # es 局域网地址，ip不能写成localhost或127.0.0.1
+      index => "logstash-%{+YYYY.MM.dd}" # es 索引
     }
   }
   ```
@@ -95,7 +95,7 @@
   # 挂载 filebeat.yml 配置文件报错，采用下面的方式解决
   ```
 
-### 修改配置文件
+* 修改配置文件
 
 * ```bash
   # 复制配置文件到宿主机
@@ -120,22 +120,22 @@
     fields:
       index: logapp
   
-  #============================= Filebeat modules ===============================
+  #============================= Filebeat modules ==============================
   filebeat.config.modules:
     # Glob pattern for configuration loading
     path: ${path.config}/modules.d/*.yml
     # Set to true to enable config reloading
     reload.enabled: true
   
-  # ============================== logstash =====================================  
+  #============================== logstash =====================================  
   output.logstash:
     hosts: ["172.16.121.132:4560"] # 172.16.121.132为logstash安装的服务器ip
     enabled: true
-  #============================== Kibana =====================================
+  #============================== Kibana =======================================
   setup.kibana:
     host: "172.16.121.132:5601"
   
-  #============================== elasticsearch =====================================
+  #============================== elasticsearch ================================
   #output.elasticsearch:
   #  hosts: ["172.16.121.132:9200"]
   #  enabled: true
@@ -143,10 +143,12 @@
 
 ## 查看索引
 
-* ```tex
-  安装elasticsearch-head插件
-  访问 http://localhost:9100/
-  查看索引 logstash-2021.07.16
+* ```bash
+  # 安装 elasticsearch-head 插件
+  # 访问
+  http://localhost:9100/
+  # 查看索引
+  logstash-2021.07.16
   ```
 
 ## 配置kibana
