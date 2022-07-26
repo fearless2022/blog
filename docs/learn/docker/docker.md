@@ -70,3 +70,9 @@
 * ```bash
   docker run -itd --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 mysql
   ```
+
+## docker容器设置关闭开机自启动命令
+
+* ```bash
+  docker update --restart=no 容器id
+  ```
