@@ -2,7 +2,9 @@
 
 > The harder you work, the more luck you have.
 
-> ⭐️ 推荐文章：[个人博客搭建](/blog/个人博客搭建.md)
+> 不念过往，不为未来，珍惜现在。
+
+> ⭐ 推荐文章：[个人博客搭建](/blog/个人博客搭建.md)
 
 <!-- tabs:start -->
 
