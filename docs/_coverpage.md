@@ -2,7 +2,7 @@
 
 ![logo](file/base/pic/logo.svg)
 
-# fearless<sup>233</sup>'s blog
+# fearless's blog
 
 > The harder you work, the more luck you have.
 
