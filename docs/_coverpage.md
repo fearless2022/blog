@@ -6,6 +6,8 @@
 
 > The harder you work, the more luck you have.
 
+> 不念过往，不为未来，珍惜现在。
+
 - 学习笔记 | 技术分享 | 生活随笔
 
 [GitHub](https://github.com/fearless2022/blog/tree/master/docs/)
