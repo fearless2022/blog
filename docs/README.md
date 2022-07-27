@@ -6,7 +6,7 @@
 
 > ⭐ 推荐文章：[docsify搭建个人博客](/blog/docsify搭建个人博客.md)
 
-> ⭐ 休息一下：[puzzle game](https://puzzle.fearless233.fun/)
+> ⭐ 休闲一刻：[puzzle game](https://puzzle.fearless233.fun/)
 
 <!-- tabs:start -->
 
