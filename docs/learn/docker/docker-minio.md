@@ -9,9 +9,7 @@
 ### 启动镜像
 
 * ```bash
-  docker run -id -p 9000:9000 --name minio --privileged=true -e "MINIO_ROOT_USER=r" -e "MINIO_ROOT_PASSWORD=123456" -v /root/docker/minio/data:/data -v /root/docker/minio/config:/root/.minio minio/minio server /data --console-address ":9000" --address ":9090"
-  
-  docker run -p 9000:9000 --name minio minio/minio server /data --console-address ":9000" --address ":9090"
+  docker run -d  -p 9000:9000 -p 9001:9001 --name minio  -v D:\File\ProjectFile\Resource\minio\data:/data -e "MINIO_ROOT_USER=minioadmin" -e "MINIO_ROOT_PASSWORD=minioadmin"   minio/minio  server /data --console-address ":9001"
   ```
 
 ## 普通安装
@@ -41,10 +39,10 @@
 
 * ```yaml
   minio:
-    endpoint: loc #部署时改为对象存储服务器的ip地址
+    endpoint: localhost #部署时改为对象存储服务器的ip地址
     port: 9000
-    accessKey: 9KVEBI97sQn0eIZs
-    secretKey: 6iiergAB68wzHbb21GaECFNljp7UErzh
+    accessKey: PO8QYT2GX2QM6AC747QV
+    secretKey: Bt2MyxyP+RXIHNF7xC9GLUq1JFqmLOyMlj+2Hd3Z
     secure: false
     bucketName: fearless
   ```
