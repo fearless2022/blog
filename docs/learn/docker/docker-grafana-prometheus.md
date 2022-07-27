@@ -69,14 +69,14 @@
 
 ### 导入template
 
-* ![image-20220726173556495](../../file/image/docker-grafana-prometheus/image-20220726173556495.png)
+* ![image-20220727162255497](../../file/image/docker-grafana-prometheus/image-20220727162255497.png)
 * ![image-20220726174548902](../../file/image/docker-grafana-prometheus/image-20220726174548902.png)
 
 ## 安装mysql-exporter
 
 * ```bash
   # 拉取镜像并启动容器
-  docker run -d --name mysql-exporter -p 9104:9104 -e DATA_SOURCE_NAME="root:root@(localhost:3306)/mysql" prom/mysqld-exporter
+  docker run -d --name mysql-exporter -p 9104:9104 -e DATA_SOURCE_NAME="root:root@(172.16.121.132:3306)/" prom/mysqld-exporter
   # 修改 prometheus.yml，添加配置
     # monitor mysql
     - job_name: "mysql"
@@ -87,7 +87,7 @@
 
 * 查看dashboard
 
-* ![image-20220726173920931](../../file/image/docker-grafana-prometheus/image-20220726173920931.png)
+* ![image-20220727163221832](../../file/image/docker-grafana-prometheus/image-20220727163221832.png)
 
 ## 配置监控步骤
 
