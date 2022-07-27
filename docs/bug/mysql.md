@@ -55,3 +55,10 @@
   # mysql8.0在连接数据库的url中，加上allowPublicKeyRetrieval=true
   jdbc:mysql://localhost:3306/user?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
   ```
+
+## Public Key Retrieval is not allowed
+
+* ```yaml
+  # 数据库配置连接
+  allowPublicKeyRetrieval=true
+  ```

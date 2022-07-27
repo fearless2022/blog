@@ -2,34 +2,27 @@
 
 * ```bash
   # 拉取镜像
-  docker pull elasticsearch:6.8.11
+  docker pull elasticsearch:7.16.1
   # 创建单独网络通信（elk + filebeat），这里主要做网络隔离，也可以使用默认网络
   docker network create esnet
   # 启动容器
-  docker run -d --name elasticsearch --net esnet -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:6.8.11
+  docker run -d --name elasticsearch --net esnet -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:7.16.1
   ```
 
 ## 安装kibana
 
 * ```bash
   # 拉取镜像
-  docker pull kibana:6.8.11
+  docker pull kibana:7.16.1
   # 启动容器，指定 es 局域网 ip:port
-  docker run --name kibana --net esnet -e ELASTICSEARCH_HOSTS=http://172.16.121.132:9200 -p 5601:5601 -d kibana:6.8.11
+  docker run --name kibana --net esnet -e ELASTICSEARCH_HOSTS=http://172.16.121.132:9200 -p 5601:5601 -d kibana:7.16.1
   ```
 
-## 安装logstash镜像
+## 安装logstash
 
 * ```bash
   # 版本与elasticsearch、kibana保持一致
-  docker pull logstash:6.8.11
-  ```
-
-## 安装filebeat镜像
-
-* ```bash
-  # 版本与elk一致
-  docker pull store/elastic/filebeat:6.8.11
+  docker pull logstash:7.16.1
   ```
 
 ## 创建配置文件
@@ -80,17 +73,24 @@
 ## 启动logstash
 
 * ```bash
-  docker run -it -d --name logstash --link elasticsearch --net esnet -v D:\File\ProjectFile\Resource\elk\logstash\pipeline:/usr/share/logstash/pipeline -v D:\File\ProjectFile\Resource\elk\logstash\config\logstash.yml:/usr/share/logstash/config/logstash.yml -p 4560:4560 logstash:6.8.11
+  docker run -it -d --name logstash --link elasticsearch --net esnet -v D:\File\ProjectFile\Resource\elk\logstash\pipeline:/usr/share/logstash/pipeline -v D:\File\ProjectFile\Resource\elk\logstash\config\logstash.yml:/usr/share/logstash/config/logstash.yml -p 4560:4560 logstash:7.16.1
   
   # --link + es容器名
   # --net es网络
   # -v 将docker容器目录挂载到宿主机目录（用宿主机目录替代docker容器的相应目录）
   ```
 
+## 安装filebeat
+
+* ```bash
+  # 版本与elk一致
+  docker pull store/elastic/filebeat:7.16.1
+  ```
+
 ## 启动filebeat
 
 * ```bash
-  docker run -it -d --name filebeat --net esnet -v D:\Work\IdeaWorkSpace\learn\fearless-admin\log:/var/log/logapp store/elastic/filebeat:6.8.11
+  docker run -it -d --name filebeat --net esnet -v D:\Work\IdeaWorkSpace\learn\fearless-admin\log:/var/log/logapp elastic/filebeat:7.16.1
   
   # 挂载 filebeat.yml 配置文件报错，采用下面的方式解决
   ```

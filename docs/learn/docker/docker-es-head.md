@@ -7,7 +7,7 @@
 ## 运行
 
 * ```bash
-  docker run -d --name elasticsearch_head -p 9100:9100 docker.io/mobz/elasticsearch-head:5
+  docker run -d --name elasticsearch_head --net esnet -p 9100:9100 docker.io/mobz/elasticsearch-head:5
   ```
 
 ## 修改es配置文件
@@ -38,7 +38,7 @@
   }
   # 解决
   # 进入容器
-  docker exec -it elasticsearch /bin/bash
+  docker exec -it elasticsearch_head /bin/bash
   # vi/vim vendor.js
   vi /usr/src/app/_site/vendor.js
   6886行
