@@ -2,6 +2,8 @@
 
 > [fearless's blog](https://blog.fearless233.fun/)
 
+> [fearless's puzzle game](https://puzzle.fearless233.fun/)
+
 > [fearless's github](https://github.com/fearless2022/blog)
 
 ## 使用工具

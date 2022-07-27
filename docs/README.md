@@ -6,6 +6,8 @@
 
 > ⭐ 推荐文章：[docsify搭建个人博客](/blog/docsify搭建个人博客.md)
 
+> ⭐ 拼图游戏：[puzzle game](https://puzzle.fearless233.fun/)
+
 <!-- tabs:start -->
 
   #### **English**
