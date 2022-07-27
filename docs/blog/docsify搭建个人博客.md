@@ -8,7 +8,7 @@
 
 > 一个神奇的文档网站生成器 [docsify](https://docsify.js.org/#/zh-cn/)
 
-## 安装doocsify
+## 安装docsify
 
 * ```bash
   npm i docsify-cli -g

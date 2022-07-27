@@ -3,7 +3,7 @@
 * blog
   * [](/README.md)
   * [book](/blog/book.md)
-  * [个人博客搭建](/blog/个人博客搭建.md)
+  * [docsify搭建个人博客](/blog/docsify搭建个人博客.md)
 * bug
   * [docker](/bug/docker.md)
   * [git](/bug/git.md)
