@@ -10,6 +10,8 @@
 
 - 学习笔记 | 技术分享 | 生活随笔
 
+<iframe scrolling="no" src="https://tianqiapi.com/api.php?style=tq&skin=gif&align=center" frameborder="0" width="100%" height="25" allowtransparency="true"></iframe>
+
 [GitHub](https://github.com/fearless2022/blog/tree/master/docs/)
 [Get Started](README.md)
 
