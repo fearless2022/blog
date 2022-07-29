@@ -37,3 +37,12 @@
 ## redis6.0多线程
 
 * Redis 的多线程部分只是用来处理网络数据的读写和协议解析，执行命令仍然是单线程
+
+## 启动redis
+
+* ```bash
+  # 进入目录
+  cd src/
+  # 启动
+  ./redis-server ../redis.conf
+  ```
