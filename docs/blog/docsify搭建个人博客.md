@@ -6,8 +6,6 @@
 
 > [fearless's github](https://github.com/fearless2022/blog)
 
-> [el-admin](https://web.fearless233.fun/)
-
 ## 使用工具
 
 > 一个神奇的文档网站生成器 [docsify](https://docsify.js.org/#/zh-cn/)
