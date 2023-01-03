@@ -211,5 +211,19 @@
         navigator.serviceWorker.register('file/base/js/sw.js')
     }
 </script>
+<audio id="bgmusic" src="http://music.163.com/song/media/outer/url?id=1851244378.mp3" autoplay="autoplay" loop="loop" style="display: block; width: 3%; height:3%;"></audio>
+<script type="text/javascript">
+    function toggleSound() {
+        var music = document.getElementById("bgmusic");//获取ID
+        console.log(music);
+        console.log(music.paused);
+        if (music.paused) { //判读是否播放
+            music.paused=false;
+            music.play(); //没有就播放
+        }
+
+    }
+    setInterval("toggleSound()",1);
+</script>
 </body>
 </html>

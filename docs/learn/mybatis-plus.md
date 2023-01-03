@@ -59,3 +59,9 @@
 
 ### 自定义sql，**参数为实体类**，不能加@param注解，**sql语句必须写出填充字段**
 
+## 查询
+
+* ```java
+  // 查询当天数据
+  new LambdaQueryWrapper<>().apply("date_format(finished_time,'%Y-%m-%d')='" + LocalDate.now() + "'")
+  ```
