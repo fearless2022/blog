@@ -40,6 +40,8 @@
     * [docker-elk](/learn/docker/docker-elk.md)
     * [docker-elk-filebeat](/learn/docker/docker-elk-filebeat.md)
     * [docker-minio](/learn/docker/docker-minio.md)
+    * [docker-mysql](/learn/docker/docker-mysql.md)
+    * [docker-redis](/learn/docker/docker-redis.md)
     * [docker-nginx](/learn/docker/docker-nginx.md)
     * [docker-jenkins](/learn/docker/docker-jenkins.md)
     * [docker-grafana-prometheus](/learn/docker/docker-grafana-prometheus.md)

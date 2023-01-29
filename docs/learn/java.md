@@ -1,3 +1,53 @@
+## linux安装jdk
+
+### **查看Linux系统是否有自带的jdk**
+
+* ```bash
+  # 查看java版本
+  java -version
+  # 检测jdk的安装包
+  rpm -qa | grep java
+  # 删除包
+  rpm -e --nodeps 包名
+  # 检查是否删除完
+  rpm -qa | grep java
+  ```
+
+### 下载jdk压缩包
+
+* ```bash
+  # 官网地址
+  https://www.oracle.com/java/technologies/downloads/
+  ```
+
+* ![image-20230129170501307](../file/image/java/image-20230129170501307.png)
+
+### 解压
+
+* ```bash
+  # 上传安装包
+  scp jdk-8u361-linux-x64.tar.gz root@ip:/opt
+  # 解压
+  tar -zxvf jdk-8u361-linux-x64.tar.gz
+  ```
+
+### 配置环境变量
+
+* ```bash
+  # 编辑配置文件
+  vim /etc/profile
+  # 文件追加配置
+  JAVA_HOME=/opt/jdk1.8.0_361
+  PATH=/opt/jdk1.8.0_361/bin:$PATH
+  export JAVA_HOME PATH
+  # 刷新配置
+  source /etc/profile
+  # 检查安装结果
+  java -version
+  java
+  javac
+  ```
+
 ## comparator排序
 
 * ```java
