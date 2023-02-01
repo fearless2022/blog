@@ -20,6 +20,7 @@
 * deploy
   * [eem](/deploy/eem.md)
   * [iot](/deploy/iot.md)
+  * [fearless-admin-docker](/deploy/fearless-admin-docker.md)
 * learn
   * springcloud
     * [bus](/learn/springcloud/bus.md)

@@ -37,7 +37,7 @@
   docker run --name nginx -d -p 80:80 -v D:\File\ProjectFile\Resource\nginx\nginx.conf:/etc/nginx/nginx.conf -v D:\File\ProjectFile\Resource\nginx\conf.d:/etc/nginx/conf.d -v D:\File\ProjectFile\Resource\nginx\html:/usr/share/nginx/html -v D:\File\ProjectFile\Resource\nginx\cert:/etc/nginx/cert -v D:\File\ProjectFile\Resource\nginx\logs:/var/log/nginx -e LANG=C.UTF-8 -e LC_ALL=C.UTF-8 --privileged=true nginx
   ```
 
-## nginx.conf
+## fearless-admin.conf
 
 * ```bash
   server
@@ -116,6 +116,96 @@
   # 放行druid监控相关
   location ~ /druid/.*\.(html|htm|woff|ttf|svg|eot|gif|jpg|jpeg|bmp|png|ico|txt|js|css|xml)$ {
   proxy_pass          http://47.108.248.203:8000;
+  proxy_redirect      off;
+  proxy_set_header    X-Forwarded-For $proxy_add_x_forwarded_for;
+  proxy_set_header    X-Real-IP $remote_addr;
+  proxy_set_header    Host $http_host;
+  proxy_http_version  1.1;
+  proxy_set_header    Connection "";
+  }
+  
+  }
+  ```
+
+## fearless-admin-docker.conf
+
+* ```bash
+  server
+  {
+  listen 80;
+  server_name 47.108.248.203;
+  index index.html;
+  root  /usr/share/nginx/html/fearless-admin/dist;  #dist上传的路径
+  
+  # 避免访问出现 404 错误
+  location / {
+  try_files $uri $uri/ @router;
+  index  index.html;
+  }
+  
+  location @router {
+  rewrite ^.*$ /index.html last;
+  }
+  
+  # 接口
+  location /api {
+  proxy_pass http://172.17.0.1:8000;
+  proxy_set_header X-Forwarded-Proto $scheme;
+  proxy_set_header X-Forwarded-Port $server_port;
+  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  proxy_set_header Upgrade $http_upgrade;
+  proxy_set_header Connection "upgrade";
+  }
+  
+  # 授权接口													
+  location /auth {
+  proxy_pass http://172.17.0.1:8000;
+  proxy_set_header X-Forwarded-Proto $scheme;
+  proxy_set_header X-Forwarded-Port $server_port;
+  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  proxy_set_header Upgrade $http_upgrade;
+  proxy_set_header Connection "upgrade";
+  }
+  
+  # WebSocket 服务
+  location /webSocket {
+  proxy_redirect off;
+  proxy_pass http://172.17.0.1:8000/webSocket;
+  proxy_http_version 1.1;
+  proxy_set_header Upgrade $http_upgrade;
+  proxy_set_header Connection "upgrade";
+  proxy_set_header Host $http_host;
+  proxy_set_header X-Real-IP $remote_addr;
+  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  proxy_connect_timeout 60s;
+  proxy_read_timeout 86400s;
+  proxy_send_timeout 60s;
+  }
+  
+  # 头像
+  location /avatar {
+  proxy_pass http://172.17.0.1:8000;
+  }
+  
+  # 文件
+  location /file {
+  proxy_pass http://172.17.0.1:8000;
+  }
+  
+  # swagger
+  location ~^/swagger/(.*)
+  {
+  proxy_redirect off;
+  # proxy_set_header Host $host;
+  proxy_set_header Host $host:$server_port; #添加:$server_port
+  proxy_set_header X-Real-IP $remote_addr;
+  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  proxy_pass http://172.17.0.1:8000/$1;
+  }
+  
+  # 放行druid监控相关
+  location ~ /druid/.*\.(html|htm|woff|ttf|svg|eot|gif|jpg|jpeg|bmp|png|ico|txt|js|css|xml)$ {
+  proxy_pass          http://172.17.0.1:8000;
   proxy_redirect      off;
   proxy_set_header    X-Forwarded-For $proxy_add_x_forwarded_for;
   proxy_set_header    X-Real-IP $remote_addr;
