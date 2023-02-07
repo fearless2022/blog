@@ -1,6 +1,6 @@
 ## 上传项目jar包
 
-## jar包同级目录创建Dockerfile文件
+## jar包同级目录创建dockerfile文件
 
 * ```bash
   FROM openjdk:8
