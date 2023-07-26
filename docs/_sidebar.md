@@ -66,6 +66,7 @@
   * [alive-progress](/python/alive-progress.md)
   * [naming](/python/naming.md)
   * [tqdm](/python/tqdm.md)
+  * [http.server文件共享服务器](/python/http.server文件共享服务器.md)
 * vue
   * [element-ui](/vue/element-ui.md)
   * [vue](/vue/vue.md)

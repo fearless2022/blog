@@ -14,6 +14,7 @@
 
 * ```bash
   docker build -t fearless-admin-docker .
+  # --tag, -t: 镜像的名字及标签，通常 name:tag 或者 name 格式
   ```
 
 ## 启动java容器
