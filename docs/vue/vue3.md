@@ -390,3 +390,61 @@
 
 ## 表单数据绑定
 
+* ```vue
+  <template>
+    <h3>表单输入绑定</h3>
+    <input type="text" v-model.lazy="message" />
+    <p>{{ message }}</p>
+    <input type="checkbox" v-model="checked" />
+    <label for="checkbox">{{ checked }}</label>
+  </template>
+  
+  <script>
+  export default {
+    data() {
+      return {
+        message: "",
+        checked: false,
+      };
+    },
+  };
+  </script>
+  ```
+
+## 模板引用
+
+* ```vue
+  <template>
+    <h3>模板引用</h3>
+    <div ref="container" class="container">{{ content }}</div>
+    <button @click="getElement">元素</button>
+    <input type="text" ref="username" />
+    <button @click="getValue">获取输入</button>
+    <p>{{ username }}</p>
+  </template>
+  
+  <script>
+  /**
+   * 修改文本：{{ 模板语法 }}
+   * 修改属性：v-bind:class指令
+   * 修改事件：v-on:click指令
+   */
+  export default {
+    data() {
+      return {
+        content: "容器",
+        username: "",
+      };
+    },
+    methods: {
+      getElement() {
+        this.$refs.container.innerHTML = "修改元素";
+      },
+      getValue() {
+        this.username = this.$refs.username.value;
+      },
+    },
+  };
+  </script>
+  ```
+
