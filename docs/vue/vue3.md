@@ -46,6 +46,8 @@
 
 ## 模板语法
 
+* `TemplateSyntax.vue`
+
 * ```vue
   <template>
     <h3>模板语法</h3>
@@ -63,6 +65,8 @@
   ```
 
 ## 属性绑定
+
+* `VBind.vue`
 
 * ```vue
   <template>
@@ -101,6 +105,8 @@
 
 ## 条件渲染
 
+* `VIf.vue`
+
 * ```vue
   <template>
     <h3>条件渲染</h3>
@@ -127,6 +133,8 @@
 * `v-show`：`v-show`指令也会根据表达式的真假有条件地渲染元素。然而，无论表达式为真或假，元素始终会被创建并被插入DOM。当表达式为假时，元素将不会被显示，但它仍然存在于DOM中，并占用空间。因此，`v-show`具有“惰性”和“始终存在”的特性
 
 ## 列表渲染
+
+* `VFor.vue`
 
 * ```vue
   <template>
@@ -155,6 +163,8 @@
   ```
 
 ## 事件处理器
+
+* `Event.vue`
 
 * ```vue
   <template>
@@ -219,6 +229,8 @@
 
 ## 数组侦听
 
+* `Array.vue`
+
 * ```vue
   <template>
     <h3>数组监听</h3>
@@ -250,6 +262,8 @@
   ```
 
 ## 计算属性
+
+* `Computed.vue`
 
 * ```vue
   <template>
@@ -288,6 +302,8 @@
 * 方法：方法调用总是会在重新渲染发生时再次执行函数
 
 ## class绑定
+
+* `ClassBind.vue`
 
 * ```vue
   <template>
@@ -330,6 +346,8 @@
 
 ## style绑定
 
+* `StyleBind.vue`
+
 * ```vue
   <template>
     <h3>style绑定</h3>
@@ -355,6 +373,8 @@
   ```
 
 ## 侦听器
+
+* `Watch.vue`
 
 * ```vue
   <template>
@@ -413,6 +433,8 @@
 
 ## 模板引用
 
+* `Ref.vue`
+
 * ```vue
   <template>
     <h3>模板引用</h3>
@@ -448,3 +470,618 @@
   </script>
   ```
 
+## 组件注册
+
+* 全局注册
+
+* `main.js`
+
+* ```js
+  import { createApp } from 'vue'
+  import App from './App.vue'
+  import Header from './pages/Header.vue'
+  
+  // app：Vue的实例对象
+  // 在Vue项目中，有且只有一个Vue的实例对象
+  // App：根组件
+  const app = createApp(App)
+  
+  // 全局注册：在这中间写组件的注册
+  // app.component("Header", Header)
+  // 全局数据传递
+  app.provide("globalData", "全局数据")
+  // 挂载应用
+  app.mount('#app')
+  ```
+  
+* ```vue
+  <template>
+    <h3>hello vue3</h3>
+    <Header/>
+  </template>
+  ```
+
+* 局部注册
+
+* `App.vue`
+
+* ```vue
+  <template>
+    <h3>hello vue3</h3>
+    <!-- 3.显示组件 -->
+    <!-- <TemplateSyntax/> -->
+    <!-- <VBind/> -->
+    <!-- <VIf/> -->
+    <!-- <VFor/> -->
+    <!-- <Event/> -->
+    <!-- <Array/> -->
+    <!-- <Computed/> -->
+    <!-- <ClassBind/> -->
+    <!-- <StyleBind/> -->
+    <!-- <Watch/> -->
+    <!-- <VModel/> -->
+    <!-- <Ref/> -->
+    <!-- <VComponent/> -->
+    <!-- <Header/> -->
+    <!-- <Main/> -->
+    <!-- <Aside/> -->
+    <!-- <ParentProps/> -->
+    <!-- <ParentEmit/> -->
+    <!-- <ParentAttr/> -->
+    <!-- <ParentSlot/> -->
+    <!-- <ComponentLife/> -->
+    <!-- <ComponentLifeApply/> -->
+    <!-- <ComponentC/> -->
+    <GrandParentProps />
+  </template>
+  
+  <script>
+  // 1.引入组件
+  import TemplateSyntax from "./components/TemplateSyntax.vue";
+  import VBind from "./components/VBind.vue";
+  import VIf from "./components/VIf.vue";
+  import VFor from "./components/VFor.vue";
+  import Event from "./components/Event.vue";
+  import Array from "./components/Array.vue";
+  import Computed from "./components/Computed.vue";
+  import ClassBind from "./components/ClassBind.vue";
+  import StyleBind from "./components/StyleBind.vue";
+  import Watch from "./components/Watch.vue";
+  import VModel from "./components/VModel.vue";
+  import Ref from "./components/Ref.vue";
+  import VComponent from "./components/VComponent.vue";
+  import Header from "./pages/Header.vue";
+  import Main from "./pages/Main.vue";
+  import Aside from "./pages/Aside.vue";
+  import ParentProps from "./components/ParentProps.vue";
+  import ParentEmit from "./components/ParentEmit.vue";
+  import ParentAttr from "./components/ParentAttr.vue";
+  import ParentSlot from "./components/ParentSlot.vue";
+  import ComponentLife from "./components/ComponentLife.vue";
+  import ComponentLifeApply from "./components/ComponentLifeApply.vue";
+  import ComponentC from "./components/ComponentC.vue";
+  import GrandParentProps from "./components/GrandParentProps.vue";
+  export default {
+    // 2.注入组件
+    components: {
+      TemplateSyntax,
+      VBind,
+      VIf,
+      VFor,
+      Event,
+      Array,
+      Computed,
+      ClassBind,
+      StyleBind,
+      Watch,
+      VModel,
+      Ref,
+      VComponent,
+      Header,
+      Main,
+      Aside,
+      ParentProps,
+      ParentEmit,
+      ParentAttr,
+      ParentSlot,
+      ComponentLife,
+      ComponentLifeApply,
+      ComponentC,
+      GrandParentProps,
+    },
+  };
+  </script>
+  ```
+
+## 组件间传递数据—props
+
+* `main.js`
+
+* ```js
+  import { createApp } from 'vue'
+  import App from './App.vue'
+  import Header from './pages/Header.vue'
+  
+  // app：Vue的实例对象
+  // 在Vue项目中，有且只有一个Vue的实例对象
+  // App：根组件
+  const app = createApp(App)
+  
+  // 全局注册：在这中间写组件的注册
+  // app.component("Header", Header)
+  // 全局数据传递
+  app.provide("globalData", "全局数据")
+  // 挂载应用
+  app.mount('#app')
+  ```
+
+* `GrandParentProps.vue`
+
+* ```vue
+  <template>
+    <h3>GrandParent</h3>
+    <ParentProps />
+  </template>
+  
+  <script>
+  import ParentProps from "./ParentProps.vue";
+  export default {
+    data() {
+      return {
+        message: "GrandParent to Child",
+      };
+    },
+    // provide:{
+    //     grandParentMessage:"GrandParent to Child"
+    // },
+    provide() {
+      return { grandParentMessage: this.message };
+    },
+    components: {
+      ParentProps,
+    },
+  };
+  </script>
+  ```
+
+* `ParentProps.vue`
+
+* ```vue
+  <template>
+    <h3>Parent</h3>
+    <ChildProps :title="titleMsg" :age="age" :info="info" :onEvent="dataFn" />
+    <p>父元素：{{ message }}</p>
+  </template>
+  
+  <script>
+  import ChildProps from "./ChildProps.vue";
+  export default {
+    data() {
+      return {
+        titleMsg: "A",
+        age: 20,
+        info: {
+          key: "key",
+          value: "value",
+        },
+        message: "",
+      };
+    },
+    components: {
+      ChildProps,
+    },
+    methods: {
+      dataFn(data) {
+        this.message = data;
+      },
+    },
+  };
+  </script>
+  ```
+
+* `ChildProps.vue`
+
+* ```vue
+  <template>
+    <h3>Child</h3>
+    <p>{{ title }} - {{ name }}</p>
+    <ul>
+      <li v-for="(item, index) in nums" :key="index">{{ item }}</li>
+    </ul>
+    <p>{{ info.key }}</p>
+    <p>{{ info.value }}</p>
+    <p>{{ onEvent("传递数据") }}</p>
+    <p>{{ grandParentMessage }}</p>
+    <p>{{ fullMessage }}</p>
+    <P>{{ globalData }}</P>
+  </template>
+  
+  <script>
+  export default {
+    props: {
+      title: {
+        type: String,
+      },
+      name: {
+        type: [String, Number],
+        default: "C",
+      },
+      age: {
+        type: Number,
+        required: true,
+      },
+      // 数字和字符串可以直接default，如果是数组和对象，必须通过工厂函数返回默认值
+      nums: {
+        type: Array,
+        default() {
+          return [1, 2, 3];
+        },
+      },
+      info: {
+        type: Object,
+      },
+      onEvent: {
+        type: Function,
+      },
+    },
+    inject: ["grandParentMessage", "globalData"],
+    data() {
+      return {
+        fullMessage: this.grandParentMessage,
+      };
+    },
+  };
+  </script>
+  ```
+  
+* props：传递数据只能父组件传递到子组件
+
+* props：传递的数据是只读的，不允许修改
+
+* provide和inject：传递数据只能自上往下传递
+
+## 组件事件
+
+* `ParentEmit.vue`
+
+* ```vue
+  <template>
+    <h3>Parent</h3>
+    <ChildEmit @someEvent="getHandle" @searchEvent="searchHandle" />
+    <p>{{ message }}</p>
+    <p>搜索内容：{{ searchMsg }}</p>
+  </template>
+    
+  <script>
+  import ChildEmit from "./ChildEmit.vue";
+  export default {
+    data() {
+      return {
+        message: "",
+        searchMsg: "",
+      };
+    },
+    components: {
+      ChildEmit,
+    },
+    methods: {
+      getHandle(childMsg) {
+        this.message = childMsg;
+      },
+      searchHandle(data) {
+        this.searchMsg = data;
+      },
+    },
+  };
+  </script>
+  ```
+
+* `ChildEmit.vue`
+
+* ```vue
+  <template>
+    <h3>Child</h3>
+    <button @click="sendHandle">传递数据：子->父</button>
+    搜索：<input type="text" v-model="search" />
+  </template>
+    
+  <script>
+  export default {
+    emits: ["someEvent", "searchEvent"],
+    data() {
+      return {
+        msg: "child message",
+        search: "",
+      };
+    },
+    methods: {
+      sendHandle() {
+        // 自定义事件
+        this.$emit("someEvent", this.msg);
+      },
+    },
+    watch: {
+      search(newValue, oldValue) {
+        this.$emit("searchEvent", newValue);
+      },
+    },
+  };
+  </script>
+  ```
+
+* 父传子：`props`
+
+* 子传父：自定义事件（`this.$emit`)，`props`函数间接传递
+
+## 透传Attributes
+
+* `ParentAttr.vue`
+
+* ```vue
+  <template>
+    <h3>父属性</h3>
+    <ChildAttr class="attr-container" />
+  </template>
+  
+  <script>
+  import ChildAttr from "./ChildAttr.vue";
+  export default {
+    components: {
+      ChildAttr,
+    },
+  };
+  </script>
+  ```
+
+* `ChildAttr.vue`
+
+* ```vue
+  <template>
+    <!-- 必须是唯一根属性 -->
+    <h3>子属性</h3>
+  </template>
+  
+  <script>
+  export default {
+    // 禁用属性透传
+    inheritAttrs: false,
+  };
+  </script>
+  
+  <style scoped>
+  .attr-container {
+    color: red;
+  }
+  </style>
+  ```
+
+## 插槽Slots
+
+* `ParentSlot.vue`
+
+* ```vue
+  <template>
+    <ChildSlot>
+      <template v-slot:title>
+        <h3>插槽标题</h3>
+      </template>
+      <template #content="slotProps">
+        <p>{{ message }} - {{ slotProps.msg }}</p>
+      </template>
+    </ChildSlot>
+  </template>
+  
+  <script>
+  import ChildSlot from "./ChildSlot.vue";
+  export default {
+    data() {
+      return {
+        message: "插槽内容",
+      };
+    },
+    components: {
+      ChildSlot,
+    },
+  };
+  </script>
+  ```
+
+* `ChildSlot.vue`
+
+* ```vue
+  <template>
+    <h3>插槽基础知识</h3>
+    <slot name="title">插槽默认值</slot>
+    <slot name="content" :msg="childMessage">插槽默认值</slot>
+  </template>
+  
+  <script>
+  export default {
+    data() {
+      return {
+        childMessage: "子组件数据",
+      };
+    },
+  };
+  </script>
+  ```
+
+## 组件生命周期
+
+* ![组件生命周期图示](../file/image/vue3/lifecycle.16e4c08e.png)
+* `ComponentLife.vue`
+* ```vue
+  <template>
+    <h3>组件的生命周期</h3>
+    <p>{{ msg }}</p>
+    <button @click="update">修改数据</button>
+  </template>
+  
+  <script>
+  /**
+   * 生命周期函数
+   *  创建期：beforeCreate created
+   *  挂载期：beforeMount mounted
+   *  更新期：beforeUpdate updated
+   *  销毁期：beforeUnmount unmounted
+   */
+  export default {
+    data() {
+      return {
+        msg: "A",
+      };
+    },
+    methods: {
+      update() {
+        this.msg = "B";
+      },
+    },
+    beforeCreate() {
+      console.log("组件创建之前");
+    },
+    created() {
+      console.log("组件创建之后");
+    },
+    beforeMount() {
+      console.log("组件渲染之前");
+    },
+    mounted() {
+      console.log("组件渲染之后");
+    },
+    beforeUpdate() {
+      console.log("组件更新之前");
+    },
+    updated() {
+      console.log("组件更新之后");
+    },
+    beforeUnmount() {
+      console.log("组件销毁之前");
+    },
+    unmounted() {
+      console.log("组件销毁之后");
+    },
+  };
+  </script>
+  ```
+
+## 组件生命周期应用
+
+* `ComponentLifeApply.vue`
+
+* ```vue
+  <template>
+    <h3 ref="name">组件的生命周期应用</h3>
+    <ul>
+      <li v-for="item in items" :key="item.id">
+        <p>{{ item.id }}</p>
+        <p>{{ item.age }}</p>
+        <p>{{ item.name }}</p>
+        <p>{{ item.score }}</p>
+      </li>
+    </ul>
+  </template>
+  
+  <script>
+  /**
+   * 生命周期函数
+   *  创建期：beforeCreate created
+   *  挂载期：beforeMount mounted
+   *  更新期：beforeUpdate updated
+   *  销毁期：beforeUnmount unmounted
+   */
+  export default {
+    data() {
+      return {
+        items: [],
+      };
+    },
+    beforeMount() {
+      console.log(this.$refs.name); // undefined
+    },
+    mounted() {
+      // 获取元素DOM结构
+      console.log(this.$refs.name);
+      // 模拟网络请求
+      this.items = [
+        { age: 18, id: 1, name: "张三", score: 88.0 },
+        { age: 20, id: 2, name: "李四", score: 90.0 },
+      ];
+    },
+  };
+  </script>
+  ```
+
+## 动态组件
+
+* `ComponentC.vue`
+
+* ```vue
+  <template>
+    <h3>ComponentC</h3>
+    <component :is="tabComponent"></component>
+    <button @click="changeHandle">切换组件</button>
+  </template>
+  
+  <script>
+  import ComponentA from "./ComponentA.vue";
+  import ComponentB from "./ComponentB.vue";
+  export default {
+    data() {
+      return {
+        tabComponent: "ComponentA",
+      };
+    },
+    components: {
+      ComponentA,
+      ComponentB,
+    },
+    methods: {
+      changeHandle() {
+        this.tabComponent =
+          this.tabComponent == "ComponentA" ? "ComponentB" : "ComponentA";
+      },
+    },
+  };
+  </script>
+  ```
+
+* `ComponentA.vue`
+
+* ```vue
+  <template>
+      <h3>ComponentA</h3>
+  </template>
+  ```
+
+* `ComponentB.vue`
+
+* ```vue
+  <template>
+      <h3>ComponentB</h3>
+  </template>
+  ```
+
+
+## Vue应用
+
+* `main.js`
+
+* ```js
+  import { createApp } from 'vue'
+  import App from './App.vue'
+  import Header from './pages/Header.vue'
+  
+  // app：Vue的实例对象
+  // 在Vue项目中，有且只有一个Vue的实例对象
+  // App：根组件
+  const app = createApp(App)
+  
+  // 全局注册：在这中间写组件的注册
+  // app.component("Header", Header)
+  // 全局数据传递
+  app.provide("globalData", "全局数据")
+  // 挂载应用
+  app.mount('#app')
+  ```
+
+* assets文件夹：存放公共静态资源
