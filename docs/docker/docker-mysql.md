@@ -36,15 +36,15 @@
   
   sql_mode='STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
   # 启动容器
-  docker run -p 33070:3306 --name mysql \
+  docker run -p 3306:3306 --name mysql \
   -v /data/mysql/log:/var/log/mysql \
   -v /data/mysql/data:/var/lib/mysql \
   -v /data/mysql/conf:/etc/mysql/conf.d \
-  -e MYSQL_ROOT_PASSWORD=password@#2022 \
+  -e MYSQL_ROOT_PASSWORD=password@2024 \
   --restart=always \
   -d mysql:8.1.0
   # 创建用户
-  create user test identified by 'test@2023';
+  create user test identified by 'test@2024';
   
   GRANT ALL ON test.* TO 'test'@'%';
   
