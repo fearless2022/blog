@@ -82,3 +82,11 @@
 * ```bash
   docker update --restart=no 容器id
   ```
+
+## docker查询日志
+
+* ```bash
+  # 查看实时日志
+  docker logs -f --tail 100 容器id
+  # 导出时间段日志
+  docker logs -t  --since '2024-03-21T15:30:00'  --until='2024-03-21T16:00:00' 容器id > log1.txt
