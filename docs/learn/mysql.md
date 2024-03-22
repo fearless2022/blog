@@ -67,7 +67,7 @@
 
 ## 查询数据库表结构
 
-```sql
+* ```sql
 SELECT
 	COLUMN_NAME 列名,
 	COLUMN_TYPE 数据类型,
@@ -82,30 +82,60 @@ FROM
 -- 如果不写的话，默认会查询出所有表中的数据，这样可能就分不清到底哪些字段
 	table_name = 'dj_admin'
 -- 这个也就是你具体查看的那个表
-```
 
-## **使用mysql自带工具mysqldump进行全库备份以及source命令恢复数据库**
+## 登录
 
-```bash
-# mysql数据库提供了一个很好用的工具mysqldump用以备份数据库，下面将使用mysqldump命令进行备份所有数据库以及指定数据库
-# mysqldump一次性备份所有数据库数据
+* ```sql
+  mysql -u root -p root
+  ```
 
-/usr/local/mysql/bin/mysqldump -u用户名 -p密码 --all-databases > /保存路径/文件名.sql
+## 设置密码
 
-# 注意：以上命令直接在控制台输入即可，无须登录进入数据库操作界面
+* ```sql
+  SET PASSWORD FOR root=PASSWORD('yourpassword');
+  ```
 
-# 以上命令执行后，你就可以在对应路径下，找到你的备份sql文件了
+## 创建用户授权
 
-# mysqldump 一次性备份指定的多个数据库数据
+* ```sql
+  # 创建用户
+  CREATE USER 'user'@'%' IDENTIFIED BY '123456';
+  # 查询权限
+  SELECT * FROM mysql.user;
+  SHOW GRANTS FOR 'user'@'%';
+  # 授权
+  GRANT ALL PRIVILEGES ON *.* TO 'user'@'%';
+  # 刷新权限
+  FLUSH PRIVILEGES;
+  # 撤销用户权限
+  REVOKE privilege ON databasename.tablename FROM 'username'@'host';
+  # 删除用户
+  DROP USER 'username'@'host';
+  # 重启数据库
+  service mysqld restart;
+  ```
 
-/usr/local/mysql/bin/mysqldump -u用户名 -p密码 --databases 数据库1 数据库2... > 保存路径/文件名.sql
+## 使用mysql自带工具mysqldump进行全库备份以及source命令恢复数据库
 
-# 注意：使用以上两种方式备份的数据库，会将数据库的创建语句一起进行了备份。因此，还原时，无须先创建数据库再进行还原。有一些远程连接数据库的工具，也提供了备份的功能，但备份的sql文件中，不一定备份了数据库创建语句，因此，还原时，要保存数据库已经创建了，否则还原不了
-
-# 使用source 命令恢复数据库
-
-# 使用source 命令，需要先登录数据库，在数据库操作界面调用该指令进行还原，语法如下
-
-source 路径/文件名.sql
-```
-
+* ```sql
+  # mysql数据库提供了一个很好用的工具mysqldump用以备份数据库，下面将使用mysqldump命令进行备份所有数据库以及指定数据库
+  # mysqldump一次性备份所有数据库数据
+  
+  /usr/local/mysql/bin/mysqldump -u用户名 -p密码 --all-databases > /保存路径/文件名.sql
+  
+  # 注意：以上命令直接在控制台输入即可，无须登录进入数据库操作界面
+  
+  # 以上命令执行后，你就可以在对应路径下，找到你的备份sql文件了
+  
+  # mysqldump 一次性备份指定的多个数据库数据
+  
+  /usr/local/mysql/bin/mysqldump -u用户名 -p密码 --databases 数据库1 数据库2... > 保存路径/文件名.sql
+  
+  # 注意：使用以上两种方式备份的数据库，会将数据库的创建语句一起进行了备份。因此，还原时，无须先创建数据库再进行还原。有一些远程连接数据库的工具，也提供了备份的功能，但备份的sql文件中，不一定备份了数据库创建语句，因此，还原时，要保存数据库已经创建了，否则还原不了
+  
+  # 使用source 命令恢复数据库
+  
+  # 使用source 命令，需要先登录数据库，在数据库操作界面调用该指令进行还原，语法如下
+  
+  source 路径/文件名.sql
+  ```
