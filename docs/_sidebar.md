@@ -1,7 +1,5 @@
 <!-- docs/_sidebar.md --> 
 
-* ai
-  * [ai](ai.md)
 * blog
   * [](/README.md)
   * [book](/blog/book.md)
