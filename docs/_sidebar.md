@@ -23,6 +23,9 @@
   * [docker-redis](/docker/docker-redis.md)
   * [docker](/docker/docker.md)
   * [kubernetes](/docker/kubernetes.md)
+* fun
+  * [有趣的注释](/fun/有趣的注释.md)
+  * [IT英文名言](/fun/IT英文名言.md)
 * learn
   * [annotation](/learn/annotation.md)
   * [elasticsearch](/learn/elasticsearch.md)
@@ -69,5 +72,3 @@
   * [element-ui](/vue/element-ui.md)
   * [vue](/vue/vue.md)
   * [vue3](/vue/vue3.md)
-* work
-  * [work](/work/work.md)
