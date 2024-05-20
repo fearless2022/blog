@@ -14,3 +14,9 @@
   # 然后推送即可
   git push -u origin master
   ```
+
+## windows升级git
+
+* ```bash
+  git update-git-for-windows
+  ```
