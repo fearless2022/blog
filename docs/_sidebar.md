@@ -56,6 +56,7 @@
   * [alive-progress](/python/alive-progress.md)
   * [http.server文件共享服务器](/python/http.server文件共享服务器.md)
   * [naming](/python/naming.md)
+  * [python](/python/python.md)
   * [tqdm](/python/tqdm.md)
 * springcloud
   * [服务调用](/springcloud/服务调用.md)
