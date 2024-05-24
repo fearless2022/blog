@@ -1,8 +1,8 @@
 ## 预览
 
-> [fearless's blog](https://blog.fearless233.fun/)
+> [fearless's blog](https://fearless2022.github.io/blog/#/)
 
-> [fearless's puzzle game](https://puzzle.fearless233.fun/)
+> [fearless's puzzle game](https://fearless2022.github.io/puzzle/)
 
 > [fearless's github](https://github.com/fearless2022/blog)
 
