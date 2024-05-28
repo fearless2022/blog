@@ -44,6 +44,7 @@
   * [other](/learn/other.md)
   * [redis](/learn/redis.md)
   * [typora](/learn/typora.md)
+  * [unit_test](/learn/unit_test.md)
   * [zookeeper](/zookeeper.md)
 * project
   * [alarm](/project/alarm.md)
