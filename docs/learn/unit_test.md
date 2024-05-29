@@ -1,7 +1,7 @@
 ## Mock 静态方法
 
 * ```java
-  // 导包，注意如果导入junit.jupiter执行时会报错
+  // 导包，注意如果导入junit.jupiter执行时会报错，需要将方法全部改为public，@BeforeEach改为@Before
   import org.junit.Before;
   import org.junit.Test;
   import org.junit.runner.RunWith;
@@ -19,6 +19,7 @@
 
 * ```java
   // mock mapper
+  @Mock
   private ShopMallEntranceMapper shopMallEntranceMapper;
   // cock baseMapper
   ReflectionTestUtils.setField(shopMallEntranceService, "baseMapper", shopMallEntranceMapper);
