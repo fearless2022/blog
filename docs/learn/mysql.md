@@ -49,16 +49,16 @@
 
 * ```sql
   # 查看当前数据库的INSERT、UPDATE、DELETE、SELECT的访问频次
-    SHOW GLOBAL STATUS LIKE 'Com_______';
-    # MySQL的慢查询日志默认没有开启
-    SHOW VARIABLES LIKE 'slow_query_log';
-    # 开启慢日志，在MySQL的配置文件（/etc/my.cnf）中配置
-    # 开启MySQL慢日志查询开关
-    slow_query_log=1
-    # 设置慢日志的时间为2秒，SQL语句执行时间超过2秒，就会视为慢查询，记录慢查询日志
-    long_query_time=2
-    # 重启
-    systemctl restart mysqld
+  SHOW GLOBAL STATUS LIKE 'Com_______';
+  # MySQL的慢查询日志默认没有开启
+  SHOW VARIABLES LIKE 'slow_query_log';
+  # 开启慢日志，在MySQL的配置文件（/etc/my.cnf）中配置
+  # 开启MySQL慢日志查询开关
+  slow_query_log=1
+  # 设置慢日志的时间为2秒，SQL语句执行时间超过2秒，就会视为慢查询，记录慢查询日志
+  long_query_time=2
+  # 重启
+  systemctl restart mysqld
   ```
 
 ## **explain**

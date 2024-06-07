@@ -13,9 +13,6 @@
   // mock
   PowerMockito.mockStatic(SecurityUtils.class);
   PowerMockito.when(SecurityUtils.getDeptId()).thenReturn("1");
-  // 错误解决：Caused by: java.security.NoSuchAlgorithmException: class configured for SSLContext: sun.security.ssl.SSLContextImpl$TLSContext not a SSLContext
-  // 加类注解
-  @PowerMockIgnore("javax.net.ssl.*")
   ```
 
 ## Mock BaseMapper
@@ -24,7 +21,7 @@
   // mock mapper
   @Mock
   private ShopMallEntranceMapper shopMallEntranceMapper;
-  // cock baseMapper
+  // mock baseMapper
   ReflectionTestUtils.setField(shopMallEntranceService, "baseMapper", shopMallEntranceMapper);
   // 使用对应mapper代替baseMapper调用即可
   Mockito.when(shopMallEntranceMapper.insert(Mockito.any())).thenReturn(1);
@@ -46,11 +43,13 @@
   Mockito.when(couponAndPoolRelationshipV2Mapper.delete(Mockito.any())).thenReturn(1);
   ```
 
-## Mock 文件
+## Mock 特殊类
 
 * ```java
-  // Mock文件
-  new MockMultipartFile("测试", "测试".getBytes())
+  // Mock文件类
+  MockMultipartFile file = new MockMultipartFile("测试", "测试".getBytes());
+  // Mock HttpServletRequest
+  MockHttpServletRequest request = new MockHttpServletRequest();
   ```
 
 ## Mock MVC调用
@@ -68,4 +67,15 @@
                   .param("parentAuth", reqVo))
           .andDo(MockMvcResultHandlers.print())
           .andExpect(MockMvcResultMatchers.status().isOk());
+  ```
+
+## Mock 错误记录
+
+* ```java
+  // 1.错误解决：Caused by: java.security.NoSuchAlgorithmException: class configured for SSLContext: sun.security.ssl.SSLContextImpl$TLSContext not a SSLContext
+  // 加类注解
+  @PowerMockIgnore("javax.net.ssl.*")
+  // 2.错误解决：com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: can not find lambda cache for this entity[com.domain.ThirdJinkeActivityMemberScore]
+  // lambda cache 为null问题解决
+  TableInfoHelper.initTableInfo(new MapperBuilderAssistant(new MybatisConfiguration(), ""), ThirdJinkeActivityMemberScore.class);
   ```

@@ -9,7 +9,6 @@
   * [fearless-admin-docker](/deploy/fearless-admin-docker.md)
   * [iot](/deploy/iot.md)
 * docker
-  * [docker-bug](/docker/docker-bug.md)
   * [docker-elk-filebeat](/docker/docker-elk-filebeat.md)
   * [docker-elk](/docker/docker-elk.md)
   * [docker-es-head](/docker/docker-es-head.md)
@@ -28,6 +27,7 @@
   * [IT英文名言](/fun/IT英文名言.md)
 * learn
   * [annotation](/learn/annotation.md)
+  * [bug](/learn/bug.md)
   * [elasticsearch](/learn/elasticsearch.md)
   * [gateway](/learn/gateway.md)
   * [git](/learn/git.md)
@@ -36,15 +36,12 @@
   * [jpa](/learn/jpa.md)
   * [linux](/learn/linux.md)
   * [maven](/learn/maven.md)
-  * [mongodb-bug](/learn/mongodb-bug.md)
   * [mongodb](/learn/mongdb.md)
   * [mybatis-plus](/learn/mybatis-plus.md)
-  * [mysql-bug](/learn/mysql-bug.md)
   * [mysql](/learn/mysql.md)
-  * [other](/learn/other.md)
   * [redis](/learn/redis.md)
   * [typora](/learn/typora.md)
-  * [unit_test](/learn/unit_test.md)
+  * [unit-test](/learn/unit-test.md)
   * [zookeeper](/zookeeper.md)
 * project
   * [alarm](/project/alarm.md)

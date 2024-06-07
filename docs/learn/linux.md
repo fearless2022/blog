@@ -44,7 +44,7 @@
   
   less 工具也是对文件或其它输出进行分页显示的工具，应该说是linux正统查看文件内容的工具，功能极其强大。
   less 的用法比起 more 更加的有弹性。在 more 的时候，我们并没有办法向前面翻， 只能往后面看但若使用了 less 时，就可以使用 [pageup][pagedown] 等按键的功能来往前往后翻看文件，更容易用来查看一个文件的内容。
-  除此之外，在 less 里头可以拥有更多的搜索功能，不止可以向下搜，也可以向上搜
+  除此之外，在 less 里面拥有更多的搜索功能，不止可以向下搜，也可以向上搜
   ```
 
 ## 浮点数运算
@@ -139,7 +139,7 @@
 ## scp命令
 
 * ```bash
-  scp -P 65535 admin@116.63.185.123:/www/project/huafei_eemsys/dist.zip D:\Work\WorkSoftwareStartUp
+  scp -P 65535 admin@ip:/www/project/huafei_eemsys/dist.zip D:\Work\WorkSoftwareStartUp
   
   scp -P 29966 -r root@远程ssh服务器的ip:/home/wwwroot/.* /Users/ianMac/Desktop/
   
@@ -150,7 +150,7 @@
 ## ssh命令
 
 * ```bash
-  ssh -p 65535 admin@116.63.185.123
+  ssh -p 65535 admin@ip
   ```
 
 ## 防火墙相关
