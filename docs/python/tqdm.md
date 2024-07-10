@@ -26,5 +26,4 @@
   if __name__ == '__main__':
       loading_1()
       loading_2()
-  
   ```

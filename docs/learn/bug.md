@@ -121,9 +121,16 @@
   jdbc:mysql://localhost:3306/user?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
   ```
 
-## Public Key Retrieval is not allowed
+## IntelliJ IDEA创建Spring工程时报错，报错信息：Selected version of Java 17 is not supported by the project SDK ‘1.8’. Either choose a lower version of Java, or set a higher version of the SDK.
 
-* ```yaml
-  # 数据库配置连接
-  allowPublicKeyRetrieval=true
+* ```text
+  替换spring boot项目初始化源地址，创建springboot项目时，点击server URL右侧的⚙，将https://start.spring.io/ 或者 http://start.springboot.io/ 替换为 https://start.aliyun.com/ 即可
   ```
+
+## request to https://registry.npm.taobao.org/@vue%2fcli failed, reason: certificate has expired证书已过期
+
+* ```js
+  // 更换源
+  npm config set registry https://registry.npmmirror.com
+  // 查看当前下载源
+  npm config get registry

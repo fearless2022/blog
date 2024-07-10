@@ -15,7 +15,7 @@
   PowerMockito.when(SecurityUtils.getDeptId()).thenReturn("1");
   ```
 
-## Mock BaseMapper
+## Mock mybatisPlus baseMapper
 
 * ```java
   // mock mapper
@@ -27,7 +27,7 @@
   Mockito.when(shopMallEntranceMapper.insert(Mockito.any())).thenReturn(1);
   ```
 
-## Mock mybatis-plus service this.saveBatch方法
+## Mock mybatisPlus service this.saveBatch方法
 
 * ```java
   // Mockito.spy()可以在真实对象上创建间谍（类似于浅克隆），尝试在创建的间谍对象上打桩，用于mock本类this调用
@@ -36,7 +36,7 @@
   Mockito.when(service.saveBatch(Mockito.any())).thenReturn(Boolean.TRUE);
   ```
 
-## Mock mybatis-plus service this.remove方法
+## Mock mybatisPlus service this.remove方法
 
 * ```java
   // 不能用service或spy service直接mock，只能mock mapper

@@ -24,7 +24,6 @@
   * [kubernetes](/docker/kubernetes.md)
 * fun
   * [有趣的注释](/fun/有趣的注释.md)
-  * [IT英文名言](/fun/IT英文名言.md)
 * learn
   * [annotation](/learn/annotation.md)
   * [bug](/learn/bug.md)
@@ -32,6 +31,7 @@
   * [gateway](/learn/gateway.md)
   * [git](/learn/git.md)
   * [java](/learn/java.md)
+  * [java文件操作](/learn/java文件操作.md)
   * [javascript](/learn/javascript.md)
   * [jpa](/learn/jpa.md)
   * [linux](/learn/linux.md)
@@ -40,6 +40,7 @@
   * [mybatis-plus](/learn/mybatis-plus.md)
   * [mysql](/learn/mysql.md)
   * [redis](/learn/redis.md)
+  * [springcloud](/learn/springcloud.md)
   * [typora](/learn/typora.md)
   * [unit-test](/learn/unit-test.md)
   * [zookeeper](/zookeeper.md)
@@ -56,17 +57,6 @@
   * [naming](/python/naming.md)
   * [python](/python/python.md)
   * [tqdm](/python/tqdm.md)
-* springcloud
-  * [服务调用](/springcloud/服务调用.md)
-  * [bus](/springcloud/bus.md)
-  * [config](/springcloud/config.md)
-  * [eureka](/springcloud/eureka.md)
-  * [feign](/springcloud/feign.md)
-  * [hystrix](/springcloud/hystrix.md)
-  * [ribbon](/springcloud/ribbon.md)
-  * [sentinel](/springcloud/sentinel.md)
-  * [sleuth](/springcloud/sleuth.md)
-  * [zuul](/springcloud/zuul.md)
 * vue
   * [element-ui](/vue/element-ui.md)
   * [vue](/vue/vue.md)

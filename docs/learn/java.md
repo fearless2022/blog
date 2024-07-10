@@ -48,45 +48,10 @@
   javac
   ```
 
-## comparator排序
+## 集合相关
 
 * ```java
-  // 排序
-  Comparator<AlarmRecordTempDto> comparator = (o1, o2) -> {
-      // 按时间降序
-      if (!o1.getAlarmAt().isEqual(o2.getAlarmAt())) {
-          return o1.getAlarmAt().isBefore(o2.getAlarmAt()) ? 1 : -1;
-      } else {
-          // 按最高等级升序
-          if (!o1.getMaxAlarmLevel().equals(o2.getMaxAlarmLevel())) {
-              return o1.getMaxAlarmLevel() - o2.getMaxAlarmLevel() > 0 ? 1 : -1;
-          } else {
-              // 按总告警数降序
-              if (!o1.getTotalCount().equals(o2.getTotalCount())) {
-                  return o1.getTotalCount() - o2.getTotalCount() < 0 ? 1 : -1;
-              }
-          }
-      }
-      return 0;
-  };
-  List<AlarmRecordTempDto> dtoListBySort = dtoList.stream().sorted(comparator).collect(Collectors.toList());
-  ```
-
-* ```java
-  vos = vos.stream().sorted(Comparator.comparing(DataVo::getValue).reversed()).collect(Collectors.toList());
-  ```
-
-## json转换
-
-* ```java
-  JSONObject jsonObject = JSONObject.parseObject(alarmTemplate.getExtCfg());
-  JSONObject uv = jsonObject.getJSONObject("undervoltageAlarm");
-  String lv1 = jsonObject.getString("threshold1");
-  ```
-
-## list取子集
-
-* ```java
+  // list取子集
   private <T> List<T> getListByCount(Integer count, List<T> list) {
       if (list.size() > count) {
           return list.subList(0, count);
@@ -94,12 +59,14 @@
           return list;
       }
   }
-  ```
-
-## list属性映射
-
-* ```java
-  List<Long> userIds = projectUserList.stream().map(ProjectUser::getUserId).collect(Collectors.toList());
+  // 利用org.apache.commons.collections4.CollectionUtils类中的方法求交/并/差集
+  //intersection: 取交集
+  CollectionUtils.intersection(list1,list2).stream().collect(Collectors.toList());
+  //取并集（去重）
+  CollectionUtils.union(list1,list2).stream().collect(Collectors.toList());
+  //取差集
+  CollectionUtils.subtract(list1,list2).stream().collect(Collectors.toList());
+  //取两个集合的交集的补集(补集一般指绝对补集，即一般地，设S是一个集合，A是S的一个子集，由S中所有不属于A的元素组成的集合，叫做子集A在S中的绝对补集)
   ```
 
 ## jvm参数配置
@@ -142,143 +109,144 @@
 * 非公平锁在调用 lock 后，首先就会调用 CAS 进行一次抢锁，如果这个时候恰巧锁没有被占用，那么直接就获取到锁返回了
 * 非公平锁在 CAS 失败后，和公平锁一样都会进入到 tryAcquire 方法，在 tryAcquire 方法中，如果发现锁这个时候被释放了（state == 0），非公平锁会直接 CAS 抢锁，但是公平锁会判断等待队列是否有线程处于等待状态，如果有则不去抢锁，乖乖排到后面
 
-## 文件操作
+## stream流相关
 
 * ```java
-  // 临时文件夹路径
-  String directoryPath = System.getProperty("java.io.tmpdir");
-  /**
-   * 创建文件
-   */
-  private void createFile(String fileName, String directoryPath, byte[] result) {
-      // 创建文件目录
-      String filePath = directoryPath + fileName + "/";
-      File directory = new File(filePath);
-      if (!directory.exists()) {
-          directory.mkdirs();
-      }
-      // byte数组转file
-      byte2File(result, filePath, fileName + ".jpg");
-      log.info("创建临时文件成功");
-  }
-  
-  /**
-   * byte转file
-   */
-  public File byte2File(byte[] buf, String filePath, String fileName) {
-      BufferedOutputStream bos = null;
-      FileOutputStream fos = null;
-      File file = null;
-      try {
-          String path = StringUtils.isEmpty(filePath)? "" : filePath;
-          File dir = new File(path);
-          if (!dir.exists() && dir.isDirectory()) {
-              dir.mkdirs();
-          }
-          file = new File(filePath + File.separator + fileName);
-          fos = new FileOutputStream(file);
-          bos = new BufferedOutputStream(fos);
-          bos.write(buf);
-      } catch (Exception e) {
-          e.printStackTrace();
-      } finally {
-          if (bos != null) {
-              try {
-                  bos.close();
-              } catch (IOException e) {
-                  e.printStackTrace();
-              }
-          }
-          if (fos != null) {
-              try {
-                  fos.close();
-              } catch (IOException e) {
-                  e.printStackTrace();
+  // 注意Stream不会改变原对象，而会返回一个持有结果的新Stream
+  // 手动分页
+  List<DataVo> list = list.stream().skip((item.getPageNum() - 1) * item.getPageSize()).limit(item.getPageSize()).collect(Collectors.toList());
+  // list按字段分组
+  Map<LocalDate, List<AnalysisDailyRetain>> map = data.stream().collect(Collectors.groupingBy(AnalysisDailyRetain::getBeginDate));
+  // list属性映射
+  List<Long> userIds = projectUserList.stream().map(ProjectUser::getUserId).collect(Collectors.toList());
+  // 排序
+  List<DataVo> vos = vos.stream().sorted(Comparator.comparing(DataVo::getValue).reversed()).collect(Collectors.toList());
+  // comparator排序
+  Comparator<AlarmRecordTempDto> comparator = (o1, o2) -> {
+      // 按时间降序
+      if (!o1.getAlarmAt().isEqual(o2.getAlarmAt())) {
+          return o1.getAlarmAt().isBefore(o2.getAlarmAt()) ? 1 : -1;
+      } else {
+          // 按最高等级升序
+          if (!o1.getMaxAlarmLevel().equals(o2.getMaxAlarmLevel())) {
+              return o1.getMaxAlarmLevel() - o2.getMaxAlarmLevel() > 0 ? 1 : -1;
+          } else {
+              // 按总告警数降序
+              if (!o1.getTotalCount().equals(o2.getTotalCount())) {
+                  return o1.getTotalCount() - o2.getTotalCount() < 0 ? 1 : -1;
               }
           }
       }
-      return file;
+      return 0;
+  };
+  List<AlarmRecordTempDto> dtoListBySort = dtoList.stream().sorted(comparator).collect(Collectors.toList());
+  /**
+   * 交集
+   * @param list1
+   * @param list2
+   * @return
+   */
+  private static List<String> intersect(List<String> list1, List<String> list2) {
+      List<String> intersect = list1.stream().filter(item -> list2.contains(item)).collect(Collectors.toList());
+      return intersect;
   }
   
   /**
-   * 打包ZIP
+   * 差集（list1-list2）
+   * @param list1
+   * @param list2
+   * @return
    */
-  private void packageToZip(String directoryPath, String zipFilePath) {
-      // 创建一个输出流将数据写入ZIP文件
-      try (FileOutputStream fos = new FileOutputStream(zipFilePath);
-           ZipOutputStream zos = new ZipOutputStream(fos)) {
-          // 调用递归方法压缩文件或文件夹
-          addToZipFile(directoryPath, directoryPath, zos);
-          log.info("文件已成功打包成 " + zipFilePath);
-      } catch (IOException e) {
-          log.error("文件打包异常");
-      }
-  }
-  private void addToZipFile(String path, String sourceFile, ZipOutputStream zos) throws IOException {
-      File file = new File(sourceFile);
-      // 如果是文件夹，则获取其内容并递归调用此方法
-      if (file.isDirectory()) {
-          String[] fileList = file.list();
-          if (fileList != null) {
-              for (String fileName : fileList) {
-                  addToZipFile(path, sourceFile + File.separator + fileName, zos);
-              }
-          }
-          return;
-      }
-      // 如果是文件，则将其添加到ZIP文件中
-      try (FileInputStream fis = new FileInputStream(sourceFile)) {
-          String entryName = sourceFile.substring(path.length() + 1); // 获取ZIP中的条目名称
-          ZipEntry zipEntry = new ZipEntry(entryName);
-          zos.putNextEntry(zipEntry);
-          byte[] bytes = new byte[1024];
-          int length;
-          while ((length = fis.read(bytes)) >= 0) {
-              zos.write(bytes, 0, length);
-          }
-      }
+  private static List<String> minus(List<String> list1, List<String> list2) {
+      List<String> minus = list1.stream().filter(item -> !list2.contains(item)).collect(Collectors.toList());
+      return minus;
   }
   
   /**
-   * 下载ZIP
+   * 并集（不去重）
+   * @param list1
+   * @param list2
+   * @return
    */
-  private void downloadZip(HttpServletResponse response, String zipFilePath) {
-      // 设置响应头，告诉浏览器这是一个文件下载
-      response.setContentType("application/zip");
-      response.setHeader("Content-Disposition", "attachment; filename=qrCodes.zip");
-      // 读取zip文件并写入响应输出流
-      File zipFile = new File(zipFilePath);
-      try (FileInputStream fis = new FileInputStream(zipFile);
-           OutputStream os = response.getOutputStream()) {
-          byte[] buffer = new byte[1024];
-          int len;
-          while ((len = fis.read(buffer)) != -1) {
-              os.write(buffer, 0, len);
-          }
-      } catch (IOException e) {
-          log.error("文件下载异常");
-      }
+  private static List<String> unionAll(List<String> list1, List<String> list2) {
+      list1.addAll(list2);
+      return list1;
   }
   
   /**
-   * 删除文件
+   * 并集（去重）
+   * @param list1
+   * @param list2
+   * @return
    */
-  private void removeTempFile(String directoryPath, String zipFilePath) {
-      // 删除zip文件
-      deleteFolder(new File(zipFilePath));
-      // 递归删除文件夹
-      deleteFolder(new File(directoryPath));
-      log.info("删除临时文件成功");
+  private static List<String> union(List<String> list1, List<String> list2) {
+      list1.addAll(list2);
+      return list1.stream().distinct().collect(Collectors.toList());
   }
-  private void deleteFolder(File folder) {
-      if (folder.isDirectory()) {
-          File[] files = folder.listFiles();
-          if (files != null) {
-              for (File file : files) {
-                  deleteFolder(file);
-              }
-          }
+  ```
+
+## 保留x位小数
+
+* ```java
+  public static double round(double v, int scale) {
+      if (scale < 0) {
+          throw new IllegalArgumentException(
+                  "The scale must be a positive integer or zero");
       }
-      folder.delete();
+      BigDecimal b = BigDecimal.valueOf(v);
+      BigDecimal one = new BigDecimal("1");
+      return b.divide(one, scale, BigDecimal.ROUND_HALF_UP).doubleValue();
+  }
+  ```
+
+## 日期相关
+
+* ```java
+  // LocalDate转字符串-2024/06/25
+  String dateStr = LocalDate.of(2024, 6, 25).format(DateTimeFormatter.ofPattern("yyyy/MM/dd"));
+  // 字符串转LocalDate
+  LocalDate date = LocalDate.parse("20240526", DateTimeFormatter.ofPattern("yyyyMMdd"));
+  // 获取最近的周一日期
+  LocalDate.now().with(TemporalAdjusters.previousOrSame(DayOfWeek.MONDAY));
+  // 获取本月1号
+  LocalDate.now().with(TemporalAdjusters.firstDayOfMonth());
+  // 周几-TUESDAY
+  System.out.println(LocalDate.of(2024, 6, 25).getDayOfWeek());
+  // 输出周几中文-星期二
+  System.out.println(LocalDate.of(2024, 6, 25).getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.CHINA));
+  // 是否周五-false
+  System.out.println(LocalDate.of(2024, 6, 25).getDayOfWeek() == DayOfWeek.FRIDAY);
+  // 本月第几天-25
+  System.out.println(LocalDate.of(2024, 6, 25).getDayOfMonth());
+  // 获取两个日期之间的所有日期
+  public static List<LocalDate> getDatesBetween(LocalDate startDate, LocalDate endDate) {
+      List<LocalDate> dates = new ArrayList<>();
+      long numOfDaysBetween = ChronoUnit.DAYS.between(startDate, endDate);
+      for (int i = 0; i <= numOfDaysBetween; i++) {
+          LocalDate date = startDate.plusDays(i);
+          dates.add(date);
+      }
+      return dates;
+  }
+  // 获取两个日期之间的每周一
+  public List<String> getMondayBetween(LocalDate startDate, LocalDate endDate) {
+      List<String> mondays = new ArrayList<>();
+      while (!startDate.isAfter(endDate)) {
+          if (startDate.getDayOfWeek() == DayOfWeek.MONDAY) {
+              mondays.add(startDate.format(DateTimeFormatter.ofPattern("yyyyMMdd")));
+          }
+          startDate = startDate.plusDays(1);
+      }
+      return mondays;
+  }
+  // 获取两个日期之间的每月1号
+  public List<String> getMonthBetween(LocalDate startDate, LocalDate endDate) {
+      List<String> months = new ArrayList<>();
+      while (!startDate.isAfter(endDate)) {
+          LocalDate monthInitial = startDate.withDayOfMonth(1);
+          months.add(monthInitial.format(DateTimeFormatter.ofPattern("yyyyMMdd")));
+          startDate = startDate.plus(1, ChronoUnit.MONTHS);
+      }
+      return months;
   }
   ```

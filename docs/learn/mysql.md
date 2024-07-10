@@ -94,6 +94,8 @@
 
 * ```bash
   SET PASSWORD FOR root=PASSWORD('yourpassword');
+  # 初始密码
+  root@localhost: 64uoQBtRdY;d
   ```
 
 ## 创建用户授权
@@ -141,3 +143,42 @@
     source 路径/文件名.sql
   ```
 
+## windows安装MySQL 8.4 LTS 版本
+
+* ```bash
+  # 下载mysql
+   https://dev.mysql.com/downloads/mysql/
+  # 管理员方式打开cmd，否则报错：Install/Remove of the Service Denied!
+  # 初始化数据库，复制初始密码root@localhost: 64uoQBtRdY;d
+  mysqld --initialize --console
+  # 安装mysql服务
+  mysqld --install mysql
+  # 启动mysql
+  net start mysql
+  # 登录mysql
+  mysql -uroot -p
+  # 修改密码
+  ALTER USER 'root'@'localhost' IDENTIFIED BY '123456';
+  # 刷新权限
+  FLUSH PRIVILEGES;
+  # 添加系统环境变量
+  
+  # MySQL密码忘记了重置
+  # 停止mysql服务
+  net stop mysql
+  # 跳过密码验证
+  # 高版本
+  mysqld --console --skip-grant-tables --shared-memory
+  # 低版本
+  mysqld --skip-grant-tables
+  # 修改密码
+  show databases;
+  use mysql;
+  select user,host,authentication_string from user;
+  # 刷新权限之后修改密码
+  FLUSH PRIVILEGES;
+  set password for root@localhost='fearless';
+  FLUSH PRIVILEGES;
+  # 退出mysql
+  # 启动mysql服务
+  net start mysql
