@@ -41,3 +41,9 @@
   # 删除环境
   conda env remove -n dev
   ```
+
+## Python: Select Interpreter
+
+* ```python
+  # 使用快捷键“Shift+Ctrl+P”打开命令面板，输入“Python”，选择“Python: Select Interpreter”
+  ```

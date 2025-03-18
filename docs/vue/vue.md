@@ -11,11 +11,11 @@
   npm -v
   ```
 
-## 安装vue-cli
+## 安装插件
 
 * ```bash
-  npm install vue-cli -g
-  
+  # 安装ElementUI
+  npm i element-ui -S
   # 检查安装包
   vue list
   ```

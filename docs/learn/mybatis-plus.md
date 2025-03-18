@@ -63,5 +63,18 @@
 
 * ```java
   // 查询当天数据
-  new LambdaQueryWrapper<>().apply("date_format(finished_time,'%Y-%m-%d')='" + LocalDate.now() + "'")
+  new LambdaQueryWrapper<>().apply("date_format(finished_time,'%Y-%m-%d')='" + LocalDate.now() + "'");
+  aicNianBeastAtkRecordMapper.selectCount(new LambdaQueryWrapper<AicNianBeastAtkRecord>()
+                  .eq(AicNianBeastAtkRecord::getMemberId, memberId)
+                  .eq(AicNianBeastAtkRecord::getDefeated, 1)
+                  .apply("date_format(now(), '%Y-%m-%d') = date_format(create_time, '%Y-%m-%d')"));
+  // 查询字段
+  aicNianBeastThemeMapper.selectCount(new QueryWrapper<AicNianBeastTheme>()
+                  .select("DISTINCT entrance_id").lambda()
+                  .eq(AicNianBeastTheme::getDelFlag, 0));
+  // 随机查询一条数据
+  aicNianBeastMessageMapper.selectOne(new LambdaQueryWrapper<AicNianBeastMessage>()
+                  .eq(AicNianBeastMessage::getType, msgType)
+                  .eq(AicNianBeastMessage::getDelFlag, 0)
+                  .last("order by rand() limit 1")).getMessage();
   ```

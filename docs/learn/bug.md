@@ -134,3 +134,45 @@
   npm config set registry https://registry.npmmirror.com
   // 查看当前下载源
   npm config get registry
+
+## vue闪烁问题
+
+* ```tex
+  1.在闪烁元素的最外层添加上一个v-cloak，并在css中添加样式：[v-cloak] {diaplay : none;}
+  2.v-cloak 这个指令可以隐藏未编译的Mustache标签，直到实例准备完毕。
+  3.原理：利用 v-cloak 这个指令使用 display:none 来进行隐藏
+  4.使用：直接在app这个写一个 v-cloak
+  借助一个CSS
+  [v-cloak]{
+      display:none
+  }
+  ```
+
+## Avoided redundant navigation to current location: "/home".
+
+* ```js
+  // 在router的(inedx.js)配置文件中添加如下代码
+  import Vue from 'vue'
+  import VueRouter from 'vue-router'
+   
+  const originalPush = VueRouter.prototype.push
+  VueRouter.prototype.push = function push(location) {
+    return originalPush.call(this, location).catch(err => err)
+  }
+   
+  Vue.use(VueRouter)
+  ```
+
+## Spring Cloud Feign 上传文件，提示：the request was rejected because no multipart boundary was found的问题
+
+* ```java
+  /**
+   * @param file      文件
+   * @param accountId 用户唯一ID
+   * @return 结果说明
+   */
+  @PostMapping(path = "/api/file/uploadImg", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+  Result<String> uploadImg(@RequestPart("file") MultipartFile file, @RequestParam String accountId);
+  ```
+
+* 

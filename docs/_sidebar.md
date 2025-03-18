@@ -18,6 +18,7 @@
   * [docker-kafka](/docker/docker-kafka.md)
   * [docker-minio](/docker/docker-minio.md)
   * [docker-mysql](/docker/docker-mysql.md)
+  * [docker-mysql8.4.4-主从搭建](/docker/docker-mysql8.4.4-主从搭建.md)
   * [docker-nginx](/docker/docker-nginx.md)
   * [docker-redis](/docker/docker-redis.md)
   * [docker](/docker/docker.md)
